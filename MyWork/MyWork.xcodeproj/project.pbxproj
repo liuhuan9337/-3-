@@ -23,10 +23,14 @@
 		92403BA61C97AC460063911A /* tabbar_button_updates_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9B1C97AC460063911A /* tabbar_button_updates_normal.png */; };
 		92403BA71C97AC460063911A /* tabbar_button_updates_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9C1C97AC460063911A /* tabbar_button_updates_selected.png */; };
 		92403BB91C97B1840063911A /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BB81C97B1840063911A /* MyViewController.m */; };
-		92403BBC1C97B1E90063911A /* IssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BBB1C97B1E90063911A /* IssueViewController.m */; };
 		92403BBF1C97B2070063911A /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BBE1C97B2070063911A /* FriendListTableViewController.m */; };
 		92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BC11C97B21B0063911A /* FindTableViewController.m */; };
 		B041838201BABAA20CD267D6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A30B8B0288F2B1E15B98AF9 /* Pods.framework */; };
+		DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F2C1CA40AD400DC70C8 /* IssueViewController.m */; };
+		DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F2E1CA40AD400DC70C8 /* NumberOneViewController.m */; };
+		DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F301CA40AD400DC70C8 /* NumberTwoViewController.m */; };
+		DB0A8F371CA40AD400DC70C8 /* SelectPickerNewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F321CA40AD400DC70C8 /* SelectPickerNewView.m */; };
+		DB0A8F381CA40AD400DC70C8 /* SelectPickerNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0A8F331CA40AD400DC70C8 /* SelectPickerNewView.xib */; };
 		DBC015441CA37AAC00961E84 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC015431CA37AAC00961E84 /* 1.jpg */; };
 		DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */; };
 		DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8D1C9F803900A0E6B3 /* SecondViewController.m */; };
@@ -81,13 +85,20 @@
 		92403BAF1C97AE540063911A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		92403BB71C97B1840063911A /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		92403BB81C97B1840063911A /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		92403BBA1C97B1E90063911A /* IssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueViewController.h; sourceTree = "<group>"; };
-		92403BBB1C97B1E90063911A /* IssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueViewController.m; sourceTree = "<group>"; };
 		92403BBD1C97B2070063911A /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
 		92403BBE1C97B2070063911A /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
 		92403BC01C97B21B0063911A /* FindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewController.h; sourceTree = "<group>"; };
 		92403BC11C97B21B0063911A /* FindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewController.m; sourceTree = "<group>"; };
 		A9E4A394CC499E369D6B3681 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0A8F2B1CA40AD400DC70C8 /* IssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueViewController.h; sourceTree = "<group>"; };
+		DB0A8F2C1CA40AD400DC70C8 /* IssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueViewController.m; sourceTree = "<group>"; };
+		DB0A8F2D1CA40AD400DC70C8 /* NumberOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOneViewController.h; sourceTree = "<group>"; };
+		DB0A8F2E1CA40AD400DC70C8 /* NumberOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOneViewController.m; sourceTree = "<group>"; };
+		DB0A8F2F1CA40AD400DC70C8 /* NumberTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTwoViewController.h; sourceTree = "<group>"; };
+		DB0A8F301CA40AD400DC70C8 /* NumberTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberTwoViewController.m; sourceTree = "<group>"; };
+		DB0A8F311CA40AD400DC70C8 /* SelectPickerNewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPickerNewView.h; sourceTree = "<group>"; };
+		DB0A8F321CA40AD400DC70C8 /* SelectPickerNewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPickerNewView.m; sourceTree = "<group>"; };
+		DB0A8F331CA40AD400DC70C8 /* SelectPickerNewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectPickerNewView.xib; sourceTree = "<group>"; };
 		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		DBEF2C8A1C9F803900A0E6B3 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
@@ -161,11 +172,11 @@
 		92403AC31C96A8AE0063911A /* MyWork */ = {
 			isa = PBXGroup;
 			children = (
+				DB0A8F2A1CA40AD400DC70C8 /* Issue */,
 				DBC015431CA37AAC00961E84 /* 1.jpg */,
 				DBEF2C891C9F803900A0E6B3 /* Select */,
 				92403BB61C97B1700063911A /* Find */,
 				92403BB51C97B1680063911A /* FriendList */,
-				92403BB41C97B1020063911A /* Issue */,
 				92403BA81C97AD990063911A /* My */,
 				92403AC71C96A8AE0063911A /* AppDelegate.h */,
 				92403AC81C96A8AE0063911A /* AppDelegate.m */,
@@ -223,15 +234,6 @@
 			path = My;
 			sourceTree = "<group>";
 		};
-		92403BB41C97B1020063911A /* Issue */ = {
-			isa = PBXGroup;
-			children = (
-				92403BBA1C97B1E90063911A /* IssueViewController.h */,
-				92403BBB1C97B1E90063911A /* IssueViewController.m */,
-			);
-			path = Issue;
-			sourceTree = "<group>";
-		};
 		92403BB51C97B1680063911A /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +273,22 @@
 				EAB49CAAC66FB891734F3F05 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB0A8F2A1CA40AD400DC70C8 /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				DB0A8F2B1CA40AD400DC70C8 /* IssueViewController.h */,
+				DB0A8F2C1CA40AD400DC70C8 /* IssueViewController.m */,
+				DB0A8F2D1CA40AD400DC70C8 /* NumberOneViewController.h */,
+				DB0A8F2E1CA40AD400DC70C8 /* NumberOneViewController.m */,
+				DB0A8F2F1CA40AD400DC70C8 /* NumberTwoViewController.h */,
+				DB0A8F301CA40AD400DC70C8 /* NumberTwoViewController.m */,
+				DB0A8F311CA40AD400DC70C8 /* SelectPickerNewView.h */,
+				DB0A8F321CA40AD400DC70C8 /* SelectPickerNewView.m */,
+				DB0A8F331CA40AD400DC70C8 /* SelectPickerNewView.xib */,
+			);
+			path = Issue;
 			sourceTree = "<group>";
 		};
 		DBEF2C891C9F803900A0E6B3 /* Select */ = {
@@ -382,6 +400,7 @@
 				DBEF2CBA1C9F83FF00A0E6B3 /* date@2x.png in Resources */,
 				DBEF2CBD1C9F83FF00A0E6B3 /* LaunchImage-700-568h@2x.png in Resources */,
 				DBEF2CB61C9F83FF00A0E6B3 /* AppIcon57x57@2x.png in Resources */,
+				DB0A8F381CA40AD400DC70C8 /* SelectPickerNewView.xib in Resources */,
 				92403AD41C96A8AE0063911A /* LaunchScreen.storyboard in Resources */,
 				DBC015441CA37AAC00961E84 /* 1.jpg in Resources */,
 				92403B9E1C97AC460063911A /* tabbar_background.png in Resources */,
@@ -460,13 +479,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */,
 				92403AC91C96A8AE0063911A /* AppDelegate.m in Sources */,
 				92403AC61C96A8AE0063911A /* main.m in Sources */,
+				DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */,
 				DBEF2CA21C9F82E900A0E6B3 /* FirstTableViewCell.m in Sources */,
 				DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */,
 				92403BBF1C97B2070063911A /* FriendListTableViewController.m in Sources */,
 				DBF14E931C9D34F400A1E9F1 /* registerViewController.m in Sources */,
-				92403BBC1C97B1E90063911A /* IssueViewController.m in Sources */,
 				DBF14E8E1C9D2BFD00A1E9F1 /* enTerViewController.m in Sources */,
 				92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */,
 				DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */,
@@ -474,7 +494,9 @@
 				92403B9D1C97AC460063911A /* CustomTabBarVC.m in Sources */,
 				DBEF2C951C9F803900A0E6B3 /* SelectPickerView.m in Sources */,
 				92403BB91C97B1840063911A /* MyViewController.m in Sources */,
+				DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */,
 				DBEF2CA01C9F82E900A0E6B3 /* DetailViewController.m in Sources */,
+				DB0A8F371CA40AD400DC70C8 /* SelectPickerNewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

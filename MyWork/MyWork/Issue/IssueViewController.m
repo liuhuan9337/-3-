@@ -7,34 +7,56 @@
 //
 
 #import "IssueViewController.h"
+#import "NumberOneViewController.h"
+#import "NumberTwoViewController.h"
 
 @interface IssueViewController ()
+@property(nonatomic,strong)UIButton *button;
+@property(nonatomic,strong)UIButton *button1;
 
 @end
 
 @implementation IssueViewController
-- (void)rootViews
-{
-    
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.button setTitle:@"失物招领" forState:UIControlStateNormal];
+    self.button.frame = CGRectMake(100, 100, 200, 30);
+    self.button.backgroundColor = [UIColor redColor];
+    [self.button addTarget:self action:@selector(ButtonActon:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button];
+    
+    self.button1 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.button1 setTitle:@"招领启事" forState:UIControlStateNormal];
+    self.button1.frame = CGRectMake(100, 170, 200, 30);
+        self.button1.backgroundColor = [UIColor redColor];
+    [self.button1  addTarget:self action:@selector(Button1Acton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button1];
+    
+    
+  
+    
+    
     
 }
+-(void)ButtonActon:(UIButton *)sender{
+    NumberOneViewController *num = [[NumberOneViewController alloc]init];
+    
+    [self.navigationController pushViewController:num animated:YES];
+    
+}
+-(void)Button1Acton:(UIButton *)sender{
+    
+    NumberTwoViewController *numT = [[NumberTwoViewController alloc]init];
+    
+    [self.navigationController pushViewController:numT animated:YES];
+    
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
