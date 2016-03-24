@@ -27,8 +27,7 @@
 @property(nonatomic,strong)UIView *view7;
 @property(nonatomic,strong)UIView *view8;
 
-//动画 View;
-@property(nonatomic,strong)UIView *view9;
+
 
 @property(nonatomic,strong)UITextField *textfield1;
 @property(nonatomic,strong)UITextField *textfield2;
@@ -269,7 +268,6 @@
     [self.view addSubview:self.view8];
     
     
-    [self.view addSubview:self.view9];
     
     self.navigationController.navigationBar.translucent = NO;
     
@@ -277,38 +275,11 @@
 }
 -(void)tapAction:(UITapGestureRecognizer *)sender
 {
-    [UIView animateWithDuration:1 animations:^{
-        self.field = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
-        self.view9.frame = CGRectMake(0,0,self.view.frame.size.width,300);
-        
-        [self.view9 addSubview:self.field];
-        
-        self.bu1 = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.bu1.frame = CGRectMake(0, 250, self.view.frame.size.width/2, 50);
-        self.bu1.backgroundColor = [UIColor redColor];
-        [self.bu1 setTitle:@"取消" forState:UIControlStateNormal];
-        [self.view9 addSubview:self.bu1];
-        
-        self.bu2 = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.bu2.frame = CGRectMake(200, 250, self.view.frame.size.width/2+10, 50);
-        [self.bu2 setTitle:@"确定" forState:UIControlStateNormal];
-        self.bu2.backgroundColor = [UIColor greenColor];
-        [self.view9 addSubview:self.bu2];
-    }];
-    
+   
     
 }
 #pragma mark - 懒加载
 
--(UIView *)view9
-{
-    if (!_view9)
-    {
-        _view9 = [[UIView alloc] initWithFrame:CGRectMake(0,0,0, 0)];
-        _view9.backgroundColor = [UIColor whiteColor];
-    }
-    return _view9;
-}
 
 //输入日期
 -(void)textfield3Acton:(UIButton *)sender{

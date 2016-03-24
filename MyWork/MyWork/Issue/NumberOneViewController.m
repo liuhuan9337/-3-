@@ -8,9 +8,9 @@
 
 #import "NumberOneViewController.h"
 #import "SelectPickerNewView.h"
+#import "NumberThreeViewController.h"
 
-
-@interface NumberOneViewController ()<SelectPickerViewDelegate>
+@interface NumberOneViewController ()<SelectPickerViewDelegate,ThreeViewControllerDelegate>
 @property(nonatomic,strong)UILabel *Biao;//标题
 @property(nonatomic,strong)UILabel *XiaoQu;//校区
 @property(nonatomic,strong)UILabel *Time;//时间
@@ -27,9 +27,6 @@
 @property(nonatomic,strong)UIView *view6;
 @property(nonatomic,strong)UIView *view7;
 @property(nonatomic,strong)UIView *view8;
-
-//动画 View;
-@property(nonatomic,strong)UIView *view9;
 
 @property(nonatomic,strong)UITextField *textfield1;
 @property(nonatomic,strong)UITextField *textfield2;
@@ -196,20 +193,6 @@
     [self.view addSubview:self.textfield8];
     
     
-//    self.field = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
-//    [self.view9 addSubview:self.field];
-//    
-//    self.bu1 = [UIButton buttonWithType:UIButtonTypeSystem];
-//    self.bu1.frame = CGRectMake(0, 250, self.view.frame.size.width/2, 50);
-//    self.bu1.backgroundColor = [UIColor redColor];
-//    [self.view9 addSubview:self.bu1];
-//    
-//    self.bu2 = [UIButton buttonWithType:UIButtonTypeSystem];
-//    self.bu2.frame = CGRectMake(200, 250, self.view.frame.size.width/2, 50);
-//    
-//    self.bu2.backgroundColor = [UIColor greenColor];
-//    [self.view9 addSubview:self.bu2];
-    
     
     
     
@@ -272,15 +255,17 @@
     [self.view addSubview:self.view8];
     
     
-    [self.view addSubview:self.view9];
 
     self.navigationController.navigationBar.translucent = NO;
     
     self.field.text = self.pssuae;
-
+    
     // Do any additional setup after loading the view.
 }
-
+- (void)threeWithNsstring:(NSString *)str
+{
+    self.textfield9.text = str;
+}
 //发布点击**
 -(void)rightItemAction:(UIBarButtonItem *)sender{
 
@@ -292,56 +277,12 @@
 //UItextview点击推出动画页面~
 -(void)tapAction:(UITapGestureRecognizer *)sender
 {
-    [UIView animateWithDuration:1 animations:^{
-        self.field = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
-        self.view9.frame = CGRectMake(0,0,self.view.frame.size.width,300);
-
-        [self.view9 addSubview:self.field];
-        
-        self.bu1 = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.bu1.frame = CGRectMake(0, 250, self.view.frame.size.width/2, 50);
-        self.bu1.backgroundColor = [UIColor redColor];
-        [self.bu1 setTitle:@"取消" forState:UIControlStateNormal];
-          [self.bu1 addTarget:self action:@selector(bu1Action:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view9 addSubview:self.bu1];
-        
-        self.bu2 = [UIButton buttonWithType:UIButtonTypeSystem];
-        self.bu2.frame = CGRectMake(200, 250, self.view.frame.size.width/2+10, 50);
-        [self.bu2 setTitle:@"确定" forState:UIControlStateNormal];
-        self.bu2.backgroundColor = [UIColor greenColor];
-        [self.bu2 addTarget:self action:@selector(bu2Action:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view9 addSubview:self.bu2];
-    }];
-
-
-}
-
--(void)bu1Action:(UIButton *)sender{
+    NumberThreeViewController *three = [[NumberThreeViewController alloc]init];
+    three.delegate = self;
     
-        
-  
-
-
-
+    [self presentViewController:three animated:YES completion:nil];
 }
 
--(void)bu2Action:(UIButton *)sender{
-    
-
-
-
-}
-#pragma mark - 懒加载
-
--(UIView *)view9
-{
-    if (!_view9)
-    {
-        _view9 = [[UIView alloc] initWithFrame:CGRectMake(0,0,0, 0)];
-        _view9.backgroundColor = [UIColor whiteColor];
-    }
-    return _view9;
-}
 
 //*******
 //输入日期

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface NumberOneViewController : UIViewController
 @property(nonatomic,strong)NSString *pssuae;
+
+
 @end
