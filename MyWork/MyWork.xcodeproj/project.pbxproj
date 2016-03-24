@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B608C2E099F9ED2D93647F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B205D859C8DC1A7CBC4913 /* libPods.a */; };
 		92403AC61C96A8AE0063911A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403AC51C96A8AE0063911A /* main.m */; };
 		92403AC91C96A8AE0063911A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403AC81C96A8AE0063911A /* AppDelegate.m */; };
 		92403AD11C96A8AE0063911A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92403AD01C96A8AE0063911A /* Assets.xcassets */; };
@@ -25,7 +26,6 @@
 		92403BB91C97B1840063911A /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BB81C97B1840063911A /* MyViewController.m */; };
 		92403BBF1C97B2070063911A /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BBE1C97B2070063911A /* FriendListTableViewController.m */; };
 		92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BC11C97B21B0063911A /* FindTableViewController.m */; };
-		B041838201BABAA20CD267D6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A30B8B0288F2B1E15B98AF9 /* Pods.framework */; };
 		DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F2C1CA40AD400DC70C8 /* IssueViewController.m */; };
 		DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F2E1CA40AD400DC70C8 /* NumberOneViewController.m */; };
 		DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F301CA40AD400DC70C8 /* NumberTwoViewController.m */; };
@@ -62,7 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A30B8B0288F2B1E15B98AF9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92403AC11C96A8AE0063911A /* MyWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92403AC51C96A8AE0063911A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92403AC71C96A8AE0063911A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		92403BC01C97B21B0063911A /* FindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewController.h; sourceTree = "<group>"; };
 		92403BC11C97B21B0063911A /* FindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewController.m; sourceTree = "<group>"; };
 		A9E4A394CC499E369D6B3681 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D6B205D859C8DC1A7CBC4913 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A8F2B1CA40AD400DC70C8 /* IssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueViewController.h; sourceTree = "<group>"; };
 		DB0A8F2C1CA40AD400DC70C8 /* IssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueViewController.m; sourceTree = "<group>"; };
 		DB0A8F2D1CA40AD400DC70C8 /* NumberOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOneViewController.h; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B041838201BABAA20CD267D6 /* Pods.framework in Frameworks */,
+				3B608C2E099F9ED2D93647F7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +261,7 @@
 		9C27E745AFA041EAA32864CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A30B8B0288F2B1E15B98AF9 /* Pods.framework */,
+				D6B205D859C8DC1A7CBC4913 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
