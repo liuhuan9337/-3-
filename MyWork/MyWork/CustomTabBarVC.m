@@ -40,7 +40,7 @@
     
     //好友列表
     FriendListTableViewController * friendVC = [[FriendListTableViewController alloc]init];
-    friendVC.navigationItem.title = @"好友列表";
+    friendVC.navigationItem.title = @"会话列表";
     friendVC.view.backgroundColor = [UIColor purpleColor];
     UINavigationController * friendNC = [[UINavigationController alloc]initWithRootViewController:friendVC];
     
@@ -49,7 +49,7 @@
     findVC.navigationItem.title = @"发现";
     findVC.view.backgroundColor = [UIColor grayColor];
     UINavigationController * findNC = [[UINavigationController alloc]initWithRootViewController:findVC];
-    self.viewControllers = [NSArray arrayWithObjects:myNC,friendNC,issueNC,selectNC,findNC, nil];
+    self.viewControllers = [NSArray arrayWithObjects:findNC,friendNC,issueNC,selectNC,myNC, nil];
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -71,10 +71,10 @@
     
     
     //正常状态下按钮图片
-    self.nomalImageArray = [[NSArray alloc]initWithObjects:@"tabbar_button_binders_normal.png",@"tabbar_button_updates_normal.png",@"tabbar_button_centeradd.png",@"tabbar_button_sessions_normal.png",@"tabbar_button_notes_normal.png", nil];
+    self.nomalImageArray = [[NSArray alloc]initWithObjects:@"tabbar_button_notes_normal.png",@"tabbar_button_updates_normal.png",@"tabbar_button_centeradd.png",@"tabbar_button_sessions_normal.png",@"tabbar_button_binders_normal.png", nil];
     
     //高亮状态下按钮图片
-    self.hightlightedImageArray = [[NSArray alloc]initWithObjects:@"tabbar_button_binders_selected.png",@"tabbar_button_updates_selected.png",@"tabbar_button_centeradd.png",@"tabbar_button_sessions_selected.png",@"tabbar_button_notes_selected.png",nil];
+    self.hightlightedImageArray = [[NSArray alloc]initWithObjects:@"tabbar_button_notes_selected.png",@"tabbar_button_updates_selected.png",@"tabbar_button_centeradd.png",@"tabbar_button_sessions_selected.png",@"tabbar_button_binders_selected.png",nil];
     //设置imageView图片
     self.customImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, KWidthScreen, 60)];
     [self.customImageView setImage:[UIImage imageNamed:@"tabbar_background.png"]];
@@ -85,7 +85,7 @@
     //设置button的背景图片
     //OneBtn
     self.oneBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, (KWidthScreen - 84) / 4, 60)];
-    [self.oneBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_button_binders_normal.png"] forState:UIControlStateNormal];
+    [self.oneBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_button_notes_normal.png"] forState:UIControlStateNormal];
     self.oneBtn.tag = 1;
     
     [self.customView addSubview:self.oneBtn];
@@ -115,7 +115,7 @@
     
     //five
     self.fiveBtn = [[UIButton alloc]initWithFrame:CGRectMake(KWidthScreen - (KWidthScreen - 84) / 4 , 20, (KWidthScreen - 84)/4, 60)];
-    [self.fiveBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_button_notes_normal.png"] forState:UIControlStateNormal];
+    [self.fiveBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_button_binders_normal.png"] forState:UIControlStateNormal];
     self.fiveBtn.tag = 5;
     [self.customView addSubview:self.fiveBtn];
     
@@ -131,7 +131,7 @@
     
     
     if (_selectedIndex == -1) {
-        self.selectedIndex = 4;
+        self.selectedIndex = 0;
     }
     
     

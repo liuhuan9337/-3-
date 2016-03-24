@@ -10,6 +10,8 @@
 
 @interface CustomTabBarVC : UIViewController
 
+- (void)viewdidControl;
+
 //正常状态下的图片数组
 @property (nonatomic, strong)NSArray * nomalImageArray;
 

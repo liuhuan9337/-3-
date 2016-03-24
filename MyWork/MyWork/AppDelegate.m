@@ -29,43 +29,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    
-    
-    //我的界面
-    MyViewController * myTV = [[MyViewController alloc]init];
-    myTV.navigationItem.title = @"我的";
-    myTV.view.backgroundColor = [UIColor redColor];
-    UINavigationController * myNC = [[UINavigationController alloc]initWithRootViewController:myTV];
-    
-    
-    //搜索界面
-    SelectViewController * selectVC = [[SelectViewController alloc]init];
-    selectVC.navigationItem.title = @"搜索";
-    selectVC.view.backgroundColor = [UIColor brownColor];
-    UINavigationController * selectNC = [[UINavigationController alloc]initWithRootViewController:selectVC];
-    
-    //发布界面
-    IssueViewController * issueVC = [[IssueViewController alloc]init];
-    issueVC.navigationItem.title = @"发布消息";
-    issueVC.view.backgroundColor = [UIColor blueColor];
-    UINavigationController * issueNC = [[UINavigationController alloc]initWithRootViewController:issueVC];
-  
-    //好友列表
-    FriendListTableViewController * friendVC = [[FriendListTableViewController alloc]init];
-    friendVC.navigationItem.title = @"好友列表";
-    friendVC.view.backgroundColor = [UIColor purpleColor];
-    UINavigationController * friendNC = [[UINavigationController alloc]initWithRootViewController:friendVC];
-    
-    //发现列表
-    FindTableViewController * findVC = [[FindTableViewController alloc]init];
-    findVC.navigationItem.title = @"发现";
-    findVC.view.backgroundColor = [UIColor grayColor];
-    UINavigationController * findNC = [[UINavigationController alloc]initWithRootViewController:findVC];
-    
-    
-    
     CustomTabBarVC * tabBarTV = [[CustomTabBarVC alloc]init];
-    tabBarTV.viewControllers = [NSArray arrayWithObjects:myNC,friendNC,issueNC,selectNC,findNC, nil];
+    [tabBarTV viewdidControl];
+    
     /**
      *  登录界面
      */
