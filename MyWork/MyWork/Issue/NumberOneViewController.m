@@ -30,7 +30,7 @@
 
 @property(nonatomic,strong)UITextField *textfield1;
 @property(nonatomic,strong)UITextField *textfield2;
-@property(nonatomic,strong)UIButton *textfield3;
+@property(nonatomic,strong)UITextField *textfield3;
 @property(nonatomic,strong)UITextField *textfield4;
 @property(nonatomic,strong)UITextField *textfield5;
 @property(nonatomic,strong)UITextField *textfield6;
@@ -51,6 +51,8 @@
 @property (nonatomic, strong) SelectPickerNewView *pickerView;
 @property (nonatomic, assign) NSInteger flag;
 
+@property(nonatomic,strong)UIDatePicker *datePicker;
+
 
 
 
@@ -60,6 +62,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+ 
+ 
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemAction:)];
     self.navigationItem.rightBarButtonItem = rightItem;
@@ -89,7 +94,7 @@
     
   
     
-    self.Time = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 50, 40)];
+    self.Time = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 100, 40)];
     
     // self.Time.backgroundColor = [UIColor redColor];
     self.Time.text = @"丢失时间";
@@ -98,7 +103,7 @@
   
     
     
-    self.DiDian = [[UILabel alloc]initWithFrame:CGRectMake(50, 150, 50, 40)];
+    self.DiDian = [[UILabel alloc]initWithFrame:CGRectMake(50, 150, 100, 40)];
     
     //self.DiDian.backgroundColor = [UIColor redColor];
     self.DiDian.text = @"丢失地点";
@@ -149,15 +154,15 @@
     self.textfield2.placeholder = @"请输入校区";
     [self.view addSubview:self.textfield2];
     
-    self.textfield3 = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.textfield3.frame = CGRectMake(100, 100, 200, 40);
+    self.textfield3 = [[UITextField alloc]init];
+    self.textfield3.frame = CGRectMake(150, 100, 200, 40);
     
-    //self.textfield3.placeholder = @"请输入时间";
+    self.textfield3.placeholder = @"请输入时间";
     
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
 //    [self.textfield3 addGestureRecognizer:tap];
-    [self.textfield3 setTitle:@"请输入时间" forState:UIControlStateNormal];
-    [self.textfield3 addTarget:self action:@selector(textfield3Acton:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.textfield3 setTitle:@"请输入时间" forState:UIControlStateNormal];
+//    [self.textfield3 addTarget:self action:@selector(textfield3Acton:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.textfield3];
     
@@ -261,7 +266,15 @@
     self.field.text = self.pssuae;
     
     // Do any additional setup after loading the view.
+    
+    
+    
+
+    
+ 
 }
+
+
 - (void)threeWithNsstring:(NSString *)str
 {
     self.textfield9.text = str;
@@ -286,24 +299,21 @@
 
 //*******
 //输入日期
--(void)textfield3Acton:(UIButton *)sender{
-    self.pickerView = [SelectPickerNewView initPickerView];
-    self.pickerView.frame = CGRectMake(0, 400, 430, 280);
-    _pickerView.shadowView.frame = self.view.frame;
-    _pickerView.array = @[@"校园卡",@"手机"];
-    _pickerView.delegate = self;
-    self.flag = 0;
-    [self.view addSubview:_pickerView.shadowView];
-    [self.view addSubview:_pickerView];
-}
--(void)getString:(NSString *)selectString{
-    if (_flag == 0) {
-        [self.textfield3 setTitle:selectString forState:UIControlStateNormal];
-    }else{
-        [self.textfield8 setTitle:selectString forState:UIControlStateNormal];
-        
-    }
-}
+
+
+//-(void)textfield3Acton:(UIButton *)sender{
+//    
+//        self.pickerView = [SelectPickerNewView initPickerView];
+//    self.pickerView.frame = CGRectMake(0, 400, 430, 280);
+//    _pickerView.shadowView.frame = self.view.frame;
+//
+//   _pickerView.array = @[];
+//    _pickerView.delegate = self;
+//    self.flag = 0;
+//    [self.view addSubview:_pickerView.shadowView];
+//    [self.view addSubview:_pickerView];
+//}
+
 
 //物品类型
 -(void)textfield8Action:(UIButton *)sender{
@@ -317,6 +327,13 @@
     [self.view addSubview:_pickerView];
 
 
+}
+-(void)getString:(NSString *)selectString{
+    if (_flag == 1) {
+        
+        [self.textfield8 setTitle:selectString forState:UIControlStateNormal];
+        
+    }
 }
 
 

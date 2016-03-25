@@ -16,7 +16,7 @@
 }
 
 -(void)awakeFromNib{
-    self.shadowView = [UIView new];
+    self.shadowView = [[UIView alloc]initWithFrame:CGRectMake(0, -400, self.bounds.size.width, self.bounds.size.height)];
     self.shadowView.backgroundColor = [UIColor blackColor];
     self.shadowView.alpha = 0;
     [UIView animateWithDuration:0.2 animations:^{
