@@ -37,11 +37,20 @@
             [self presentViewController:[CustomTabBarVC new] animated:YES completion:nil];
             
         }else{
-#warning 提示框
-            /**
-             *  提示框
-             */
-            NSLog(@"登录失败");
+#pragma mark 提示框
+            
+//            NSLog(@"%@",error.userInfo);
+            NSString * errMessage = nil;
+            if (error.code == 211) {
+                errMessage = @"用户名不存在";
+            }if (error.code == 210) {
+                errMessage = @"用户名或密码不对";
+            }
+            UIAlertController * alertLogin = [UIAlertController alertControllerWithTitle:@"提示" message:errMessage preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction * cancle = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+            [alertLogin addAction:cancle];
+            [self showDetailViewController:alertLogin sender:nil];
+            
         }
     }];
     

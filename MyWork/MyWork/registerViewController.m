@@ -30,22 +30,41 @@
     user.password = self.passWord.text;
     user.email = self.passEmail.text;
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        
+        
         if (succeeded) {
-            NSLog(@"注册成功");
             
             [self dismissViewControllerAnimated:YES completion:nil];
             
         }else{
-            /**
-             *  提示框
-             */
-#warning 提示框
-            NSLog(@"注册不成功");
-            NSLog(@"%@",error);
+
+            NSString * strErr = nil;
+            if (error.code == 202) {
+                strErr = @"账户已经存在";
+            }else if (error.code == 125){
+                strErr = @"邮箱格式错误";
+            }else if (error.code == 217){
+                strErr = @"用户名不能为空";
+            }else if (error.code == 218){
+                strErr = @"密码不能为空";
+            }
             
-        }
+            UIAlertController * alertDone = [UIAlertController alertControllerWithTitle:@"提示" message:strErr preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction * alertture = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:nil];
+            
+            [alertDone addAction:alertture];
+            
+            [self showViewController:alertDone sender:nil];
+            
+//            NSLog(@"%@",error.userInfo);
+            
+}
     }];
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
