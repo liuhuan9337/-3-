@@ -169,6 +169,8 @@ static NSString *cellIdentifier = @"ContactCell";
         [[[UIAlertView alloc]
           initWithTitle:nil message:[NSString stringWithFormat:@"%@", error] delegate:nil
           cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+//        UIAlert
+        
         return NO;
     }
     return YES;
