@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol enTerViewDelegate <NSObject>
+- (void)enTerViewDelegateWithNSString:(NSString *)str;
+@end
 @interface enTerViewController : UIViewController
+
+
+@property(nonatomic,weak)id<enTerViewDelegate> delegate;
 
 @end

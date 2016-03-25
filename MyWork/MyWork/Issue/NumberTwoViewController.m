@@ -8,8 +8,8 @@
 
 #import "NumberTwoViewController.h"
 #import "SelectPickerNewView.h"
-
-@interface NumberTwoViewController ()<SelectPickerViewDelegate>
+#import "NumberThreeViewController.h"
+@interface NumberTwoViewController ()<SelectPickerViewDelegate,ThreeViewControllerDelegate>
 @property(nonatomic,strong)UILabel *Biao;//标题
 @property(nonatomic,strong)UILabel *XiaoQu;//校区
 @property(nonatomic,strong)UILabel *Time;//时间
@@ -275,9 +275,17 @@
 }
 -(void)tapAction:(UITapGestureRecognizer *)sender
 {
-   
+    NumberThreeViewController *three = [[NumberThreeViewController alloc]init];
+    three.delegate = self;
+    [self presentViewController:three animated:YES completion:nil];
     
 }
+#pragma mark ---协议执行的方法
+-(void)threeWithNsstring:(NSString *)str
+{
+    self.textfield9.text = str;
+}
+
 #pragma mark - 懒加载
 
 

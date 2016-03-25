@@ -7,7 +7,8 @@
 //
 
 #import "CustomTabBarVC.h"
-
+#import "ChatListViewController.h"
+#import <CDChatManager.h>
 #define KWidthScreen [UIScreen mainScreen].bounds.size.width
 #define KheightScreen [UIScreen mainScreen].bounds.size.height
 
@@ -19,6 +20,7 @@
 @implementation CustomTabBarVC
 - (void)viewdidControl
 {
+  
     //我的界面
     MyViewController * myTV = [[MyViewController alloc]init];
     myTV.navigationItem.title = @"我的";

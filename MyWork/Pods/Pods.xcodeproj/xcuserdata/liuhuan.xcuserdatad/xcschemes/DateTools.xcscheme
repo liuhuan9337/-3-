@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92403AC01C96A8AE0063911A"
-               BuildableName = "MyWork.app"
-               BlueprintName = "MyWork"
-               ReferencedContainer = "container:MyWork.xcodeproj">
+               BlueprintIdentifier = "1C55783D561F5A62C541C6046C0B124E"
+               BuildableName = "libDateTools.a"
+               BlueprintName = "DateTools"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92403AC01C96A8AE0063911A"
-            BuildableName = "MyWork.app"
-            BlueprintName = "MyWork"
-            ReferencedContainer = "container:MyWork.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,22 +42,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92403AC01C96A8AE0063911A"
-            BuildableName = "MyWork.app"
-            BlueprintName = "MyWork"
-            ReferencedContainer = "container:MyWork.xcodeproj">
+            BlueprintIdentifier = "1C55783D561F5A62C541C6046C0B124E"
+            BuildableName = "libDateTools.a"
+            BlueprintName = "DateTools"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -75,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92403AC01C96A8AE0063911A"
-            BuildableName = "MyWork.app"
-            BlueprintName = "MyWork"
-            ReferencedContainer = "container:MyWork.xcodeproj">
+            BlueprintIdentifier = "1C55783D561F5A62C541C6046C0B124E"
+            BuildableName = "libDateTools.a"
+            BlueprintName = "DateTools"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

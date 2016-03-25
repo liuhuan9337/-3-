@@ -7,22 +7,26 @@
 //
 
 #import "FriendListTableViewController.h"
-
+#import "enTerViewController.h"
+#import <CDChatListVC.h>
+#import <CDChatManager.h>
+#import "ChatListViewController.h"
 @interface FriendListTableViewController ()
-
+@property(nonatomic,strong)NSString *str;
 @end
 
 @implementation FriendListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    /**
+     *  根据传过来的注册名创建通话
+     */
 }
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -31,15 +35,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    cell.textLabel.text = @"会话列表";
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user objectForKey:@"Nsstring"];
+    [[CDChatManager manager]openWithClientId:str callback:^(BOOL succeeded, NSError *error) {
+        ChatListViewController *chat = [[ChatListViewController alloc]init];
+        [self.navigationController pushViewController:chat animated:YES];
+    } ];
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

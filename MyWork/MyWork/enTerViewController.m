@@ -31,6 +31,8 @@
         if (user != nil ) {
             NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
             [user setBool:YES forKey:@"Enter"];
+            [self.delegate enTerViewDelegateWithNSString:self.passname.text];
+            [user setObject:self.passname.text forKey:@"Nsstring"];
             [self presentViewController:[CustomTabBarVC new] animated:YES completion:nil];
         }else{
 #warning 提示框

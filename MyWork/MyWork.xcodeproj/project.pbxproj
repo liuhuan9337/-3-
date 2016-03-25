@@ -33,6 +33,9 @@
 		DB0A8F381CA40AD400DC70C8 /* SelectPickerNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0A8F331CA40AD400DC70C8 /* SelectPickerNewView.xib */; };
 		DB0A8F3B1CA40BDF00DC70C8 /* NumberThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F3A1CA40BDF00DC70C8 /* NumberThreeViewController.m */; };
 		DB0A8F401CA4100700DC70C8 /* Rootview.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F3F1CA4100700DC70C8 /* Rootview.m */; };
+		DB4727D61CA4DA0300E5AA9E /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727D51CA4DA0300E5AA9E /* ChatListViewController.m */; };
+		DB4727D91CA4DAE900E5AA9E /* ChatROOMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */; };
+		DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */; };
 		DBC015441CA37AAC00961E84 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC015431CA37AAC00961E84 /* 1.jpg */; };
 		DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */; };
 		DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8D1C9F803900A0E6B3 /* SecondViewController.m */; };
@@ -105,6 +108,12 @@
 		DB0A8F3A1CA40BDF00DC70C8 /* NumberThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberThreeViewController.m; sourceTree = "<group>"; };
 		DB0A8F3E1CA4100700DC70C8 /* Rootview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rootview.h; sourceTree = "<group>"; };
 		DB0A8F3F1CA4100700DC70C8 /* Rootview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rootview.m; sourceTree = "<group>"; };
+		DB4727D41CA4DA0300E5AA9E /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		DB4727D51CA4DA0300E5AA9E /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		DB4727D71CA4DAE900E5AA9E /* ChatROOMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatROOMViewController.h; sourceTree = "<group>"; };
+		DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatROOMViewController.m; sourceTree = "<group>"; };
+		DB4727DA1CA4DB5900E5AA9E /* UserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFactory.h; sourceTree = "<group>"; };
+		DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFactory.m; sourceTree = "<group>"; };
 		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		DBEF2C8A1C9F803900A0E6B3 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
@@ -245,6 +254,12 @@
 			children = (
 				92403BBD1C97B2070063911A /* FriendListTableViewController.h */,
 				92403BBE1C97B2070063911A /* FriendListTableViewController.m */,
+				DB4727D41CA4DA0300E5AA9E /* ChatListViewController.h */,
+				DB4727D51CA4DA0300E5AA9E /* ChatListViewController.m */,
+				DB4727DA1CA4DB5900E5AA9E /* UserFactory.h */,
+				DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */,
+				DB4727D71CA4DAE900E5AA9E /* ChatROOMViewController.h */,
+				DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */,
 			);
 			path = FriendList;
 			sourceTree = "<group>";
@@ -492,6 +507,7 @@
 				DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */,
 				92403AC91C96A8AE0063911A /* AppDelegate.m in Sources */,
 				92403AC61C96A8AE0063911A /* main.m in Sources */,
+				DB4727D91CA4DAE900E5AA9E /* ChatROOMViewController.m in Sources */,
 				DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */,
 				DB0A8F401CA4100700DC70C8 /* Rootview.m in Sources */,
 				DBEF2CA21C9F82E900A0E6B3 /* FirstTableViewCell.m in Sources */,
@@ -503,10 +519,12 @@
 				DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */,
 				DBEF2C971C9F803900A0E6B3 /* SelectViewController.m in Sources */,
 				92403B9D1C97AC460063911A /* CustomTabBarVC.m in Sources */,
+				DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */,
 				DBEF2C951C9F803900A0E6B3 /* SelectPickerView.m in Sources */,
 				92403BB91C97B1840063911A /* MyViewController.m in Sources */,
 				DB0A8F3B1CA40BDF00DC70C8 /* NumberThreeViewController.m in Sources */,
 				DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */,
+				DB4727D61CA4DA0300E5AA9E /* ChatListViewController.m in Sources */,
 				DBEF2CA01C9F82E900A0E6B3 /* DetailViewController.m in Sources */,
 				DB0A8F371CA40AD400DC70C8 /* SelectPickerNewView.m in Sources */,
 			);
