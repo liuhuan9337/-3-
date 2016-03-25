@@ -18,6 +18,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bj8-Xb-Udk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pl-NH-sHs">
                     <rect key="frame" x="50" y="119" width="54" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -61,7 +64,16 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bj8-Xb-Udk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OeP-xP-OiA"/>
+                <constraint firstAttribute="bottom" secondItem="bj8-Xb-Udk" secondAttribute="bottom" id="aAC-Ti-oYG"/>
+                <constraint firstItem="bj8-Xb-Udk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hdh-0j-g0B"/>
+                <constraint firstAttribute="trailing" secondItem="bj8-Xb-Udk" secondAttribute="trailing" id="knb-st-LgQ"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>
+    <resources>
+        <image name="1.jpg" width="146" height="220"/>
+    </resources>
 </document>

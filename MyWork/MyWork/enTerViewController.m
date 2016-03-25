@@ -10,6 +10,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "CustomTabBarVC.h"
 #import "registerViewController.h"
+
 @interface enTerViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *passname;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -34,6 +35,7 @@
             [self.delegate enTerViewDelegateWithNSString:self.passname.text];
             [user setObject:self.passname.text forKey:@"Nsstring"];
             [self presentViewController:[CustomTabBarVC new] animated:YES completion:nil];
+            
         }else{
 #warning 提示框
             /**
@@ -49,7 +51,10 @@
  */
 - (IBAction)registerAction:(id)sender {
     
-    [self.navigationController pushViewController:[registerViewController new] animated:YES];
+    [self presentViewController:[registerViewController new] animated:YES completion:nil];
+    
+    
+    
     
 }
 

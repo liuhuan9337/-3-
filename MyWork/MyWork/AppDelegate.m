@@ -11,6 +11,8 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import <CDChatManager.h>
 #import "UserFactory.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -42,10 +44,13 @@
         enTerViewController *enter = [enTerViewController new];
         UINavigationController *NaVC = [[UINavigationController alloc]initWithRootViewController:enter];
         self.window.rootViewController = NaVC;
+        
     }else{
+        
         CustomTabBarVC * tabBarTV = [[CustomTabBarVC alloc]init];
         [tabBarTV viewdidControl];
         self.window.rootViewController = tabBarTV;
+        
     }
     
     

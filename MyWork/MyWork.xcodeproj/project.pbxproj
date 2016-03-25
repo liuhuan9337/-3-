@@ -114,7 +114,7 @@
 		DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatROOMViewController.m; sourceTree = "<group>"; };
 		DB4727DA1CA4DB5900E5AA9E /* UserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFactory.h; sourceTree = "<group>"; };
 		DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFactory.m; sourceTree = "<group>"; };
-		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		DBEF2C8A1C9F803900A0E6B3 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
 		DBEF2C8C1C9F803900A0E6B3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -188,10 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				DB0A8F2A1CA40AD400DC70C8 /* Issue */,
-				DBC015431CA37AAC00961E84 /* 1.jpg */,
 				DBEF2C891C9F803900A0E6B3 /* Select */,
 				92403BB61C97B1700063911A /* Find */,
-				92403BB51C97B1680063911A /* FriendList */,
 				92403BA81C97AD990063911A /* My */,
 				92403AC71C96A8AE0063911A /* AppDelegate.h */,
 				92403AC81C96A8AE0063911A /* AppDelegate.m */,
@@ -225,6 +223,7 @@
 		92403B921C97AC460063911A /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				DBC015431CA37AAC00961E84 /* 1.jpg */,
 				DBEF2CA51C9F83FF00A0E6B3 /* 图标 */,
 				92403B931C97AC460063911A /* tabbar_background.png */,
 				92403B941C97AC460063911A /* tabbar_button_binders_normal.png */,
@@ -261,12 +260,14 @@
 				DB4727D71CA4DAE900E5AA9E /* ChatROOMViewController.h */,
 				DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */,
 			);
-			path = FriendList;
+			name = FriendList;
+			path = ../FriendList;
 			sourceTree = "<group>";
 		};
 		92403BB61C97B1700063911A /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				92403BB51C97B1680063911A /* FriendList */,
 				92403BC01C97B21B0063911A /* FindTableViewController.h */,
 				92403BC11C97B21B0063911A /* FindTableViewController.m */,
 				DBEF2C981C9F82E900A0E6B3 /* DetailViewController.h */,

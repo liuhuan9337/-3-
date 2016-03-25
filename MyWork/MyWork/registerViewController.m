@@ -19,6 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     self.passWord.secureTextEntry = YES;
 }
 - (IBAction)passWordAction:(id)sender {
@@ -29,7 +32,9 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"注册成功");
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
         }else{
             /**
              *  提示框
