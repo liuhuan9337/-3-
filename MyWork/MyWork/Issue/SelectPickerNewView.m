@@ -50,9 +50,11 @@
     return 1;
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
     return _array.count;
 }
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
     self.selectString = [_array objectAtIndex:row];
     return [_array objectAtIndex:row];
 }

@@ -10,6 +10,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "CustomTabBarVC.h"
 #import "registerViewController.h"
+
 @interface enTerViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *passname;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -34,12 +35,22 @@
             [self.delegate enTerViewDelegateWithNSString:self.passname.text];
             [user setObject:self.passname.text forKey:@"Nsstring"];
             [self presentViewController:[CustomTabBarVC new] animated:YES completion:nil];
+            
         }else{
-#warning 提示框
-            /**
-             *  提示框
-             */
-            NSLog(@"登录失败");
+#pragma mark 提示框
+            
+//            NSLog(@"%@",error.userInfo);
+            NSString * errMessage = nil;
+            if (error.code == 211) {
+                errMessage = @"用户名不存在";
+            }if (error.code == 210) {
+                errMessage = @"用户名或密码不对";
+            }
+            UIAlertController * alertLogin = [UIAlertController alertControllerWithTitle:@"提示" message:errMessage preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction * cancle = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+            [alertLogin addAction:cancle];
+            [self showDetailViewController:alertLogin sender:nil];
+            
         }
     }];
     
@@ -49,7 +60,10 @@
  */
 - (IBAction)registerAction:(id)sender {
     
-    [self.navigationController pushViewController:[registerViewController new] animated:YES];
+    [self presentViewController:[registerViewController new] animated:YES completion:nil];
+    
+    
+    
     
 }
 
