@@ -69,13 +69,13 @@
 /* Begin PBXFileReference section */
 		92403AC11C96A8AE0063911A /* MyWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92403AC51C96A8AE0063911A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		92403AC71C96A8AE0063911A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		92403AC81C96A8AE0063911A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92403AC71C96A8AE0063911A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		92403AC81C96A8AE0063911A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		92403AD01C96A8AE0063911A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92403AD31C96A8AE0063911A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92403AD51C96A8AE0063911A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92403B901C97AC460063911A /* CustomTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarVC.h; sourceTree = "<group>"; };
-		92403B911C97AC460063911A /* CustomTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarVC.m; sourceTree = "<group>"; };
+		92403B901C97AC460063911A /* CustomTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarVC.h; path = ../CustomTabBarVC.h; sourceTree = "<group>"; };
+		92403B911C97AC460063911A /* CustomTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarVC.m; path = ../CustomTabBarVC.m; sourceTree = "<group>"; };
 		92403B931C97AC460063911A /* tabbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_background.png; sourceTree = "<group>"; };
 		92403B941C97AC460063911A /* tabbar_button_binders_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_button_binders_normal.png; sourceTree = "<group>"; };
 		92403B951C97AC460063911A /* tabbar_button_binders_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_button_binders_selected.png; sourceTree = "<group>"; };
@@ -144,12 +144,12 @@
 		DBEF2CB11C9F83FF00A0E6B3 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
 		DBEF2CB21C9F83FF00A0E6B3 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		DBEF2CB31C9F83FF00A0E6B3 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
-		DBF14E8B1C9D2BFD00A1E9F1 /* enTerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enTerViewController.h; sourceTree = "<group>"; };
-		DBF14E8C1C9D2BFD00A1E9F1 /* enTerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = enTerViewController.m; sourceTree = "<group>"; };
-		DBF14E8D1C9D2BFD00A1E9F1 /* enTerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = enTerViewController.xib; sourceTree = "<group>"; };
-		DBF14E901C9D34F400A1E9F1 /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerViewController.h; sourceTree = "<group>"; };
-		DBF14E911C9D34F400A1E9F1 /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registerViewController.m; sourceTree = "<group>"; };
-		DBF14E921C9D34F400A1E9F1 /* registerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = registerViewController.xib; sourceTree = "<group>"; };
+		DBF14E8B1C9D2BFD00A1E9F1 /* enTerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enTerViewController.h; path = ../enTerViewController.h; sourceTree = "<group>"; };
+		DBF14E8C1C9D2BFD00A1E9F1 /* enTerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = enTerViewController.m; path = ../enTerViewController.m; sourceTree = "<group>"; };
+		DBF14E8D1C9D2BFD00A1E9F1 /* enTerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = enTerViewController.xib; path = ../enTerViewController.xib; sourceTree = "<group>"; };
+		DBF14E901C9D34F400A1E9F1 /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = ../registerViewController.h; sourceTree = "<group>"; };
+		DBF14E911C9D34F400A1E9F1 /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = registerViewController.m; path = ../registerViewController.m; sourceTree = "<group>"; };
+		DBF14E921C9D34F400A1E9F1 /* registerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = registerViewController.xib; path = ../registerViewController.xib; sourceTree = "<group>"; };
 		DBF14E961C9D368E00A1E9F1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EAB49CAAC66FB891734F3F05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,22 +187,14 @@
 		92403AC31C96A8AE0063911A /* MyWork */ = {
 			isa = PBXGroup;
 			children = (
+				DB4727DE1CA5154800E5AA9E /* tabBar */,
+				DB4727DD1CA5149100E5AA9E /* enterandregister */,
 				DB0A8F2A1CA40AD400DC70C8 /* Issue */,
 				DBC015431CA37AAC00961E84 /* 1.jpg */,
 				DBEF2C891C9F803900A0E6B3 /* Select */,
 				92403BB61C97B1700063911A /* Find */,
 				92403BB51C97B1680063911A /* FriendList */,
 				92403BA81C97AD990063911A /* My */,
-				92403AC71C96A8AE0063911A /* AppDelegate.h */,
-				92403AC81C96A8AE0063911A /* AppDelegate.m */,
-				DBF14E8B1C9D2BFD00A1E9F1 /* enTerViewController.h */,
-				DBF14E8C1C9D2BFD00A1E9F1 /* enTerViewController.m */,
-				DBF14E8D1C9D2BFD00A1E9F1 /* enTerViewController.xib */,
-				DBF14E901C9D34F400A1E9F1 /* registerViewController.h */,
-				DBF14E911C9D34F400A1E9F1 /* registerViewController.m */,
-				DBF14E921C9D34F400A1E9F1 /* registerViewController.xib */,
-				92403B901C97AC460063911A /* CustomTabBarVC.h */,
-				92403B911C97AC460063911A /* CustomTabBarVC.m */,
 				DBF14E961C9D368E00A1E9F1 /* PrefixHeader.pch */,
 				92403B921C97AC460063911A /* imgs */,
 				92403AD01C96A8AE0063911A /* Assets.xcassets */,
@@ -314,6 +306,30 @@
 				DB0A8F3F1CA4100700DC70C8 /* Rootview.m */,
 			);
 			path = Issue;
+			sourceTree = "<group>";
+		};
+		DB4727DD1CA5149100E5AA9E /* enterandregister */ = {
+			isa = PBXGroup;
+			children = (
+				DBF14E8B1C9D2BFD00A1E9F1 /* enTerViewController.h */,
+				DBF14E8C1C9D2BFD00A1E9F1 /* enTerViewController.m */,
+				DBF14E8D1C9D2BFD00A1E9F1 /* enTerViewController.xib */,
+				DBF14E901C9D34F400A1E9F1 /* registerViewController.h */,
+				DBF14E911C9D34F400A1E9F1 /* registerViewController.m */,
+				DBF14E921C9D34F400A1E9F1 /* registerViewController.xib */,
+			);
+			path = enterandregister;
+			sourceTree = "<group>";
+		};
+		DB4727DE1CA5154800E5AA9E /* tabBar */ = {
+			isa = PBXGroup;
+			children = (
+				92403AC71C96A8AE0063911A /* AppDelegate.h */,
+				92403AC81C96A8AE0063911A /* AppDelegate.m */,
+				92403B901C97AC460063911A /* CustomTabBarVC.h */,
+				92403B911C97AC460063911A /* CustomTabBarVC.m */,
+			);
+			path = tabBar;
 			sourceTree = "<group>";
 		};
 		DBEF2C891C9F803900A0E6B3 /* Select */ = {
