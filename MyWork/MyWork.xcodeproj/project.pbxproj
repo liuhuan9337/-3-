@@ -24,6 +24,7 @@
 		92403BB91C97B1840063911A /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BB81C97B1840063911A /* MyViewController.m */; };
 		92403BBF1C97B2070063911A /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BBE1C97B2070063911A /* FriendListTableViewController.m */; };
 		92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BC11C97B21B0063911A /* FindTableViewController.m */; };
+		9268DFCF1CA68512002E5191 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */; };
 		92C630851CA543B00098046D /* enTerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630811CA543B00098046D /* enTerViewController.m */; };
 		92C630861CA543B00098046D /* enTerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C630821CA543B00098046D /* enTerViewController.xib */; };
 		92C630871CA543B00098046D /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630831CA543B00098046D /* registerViewController.m */; };
@@ -90,6 +91,7 @@
 		92403BBE1C97B2070063911A /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
 		92403BC01C97B21B0063911A /* FindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewController.h; sourceTree = "<group>"; };
 		92403BC11C97B21B0063911A /* FindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewController.m; sourceTree = "<group>"; };
+		9268DFCE1CA68512002E5191 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
 		92C6307F1CA543850098046D /* registerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = MyWork/registerViewController.h; sourceTree = SOURCE_ROOT; };
 		92C630801CA543B00098046D /* enTerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enTerViewController.h; path = MyWork/enTerViewController.h; sourceTree = SOURCE_ROOT; };
 		92C630811CA543B00098046D /* enTerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = enTerViewController.m; path = MyWork/enTerViewController.m; sourceTree = SOURCE_ROOT; };
@@ -211,6 +213,7 @@
 			children = (
 				92403AC51C96A8AE0063911A /* main.m */,
 				92403BAF1C97AE540063911A /* PrefixHeader.pch */,
+				9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9268DFCF1CA68512002E5191 /* dataModel.xcdatamodeld in Sources */,
 				DB7A18AA1CA661DA00FDBD3A /* FirstModel.m in Sources */,
 				92C6308D1CA544040098046D /* AppDelegate.m in Sources */,
 				92C6308E1CA544040098046D /* CustomTabBarVC.m in Sources */,
@@ -695,6 +699,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9268DFCE1CA68512002E5191 /* dataModel.xcdatamodel */,
+			);
+			currentVersion = 9268DFCE1CA68512002E5191 /* dataModel.xcdatamodel */;
+			path = dataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 92403AB91C96A8AE0063911A /* Project object */;
 }
