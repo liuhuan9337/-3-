@@ -310,7 +310,7 @@ static NSInteger i = 0;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *str = [user objectForKey:@"Nsstring"];
     AVObject *text = [AVObject objectWithClassName:@"Boy"];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:self.textfield1.text,@"Biaoti",self.textfield2.text,@"xiaoqu",self.textfield3.text,@"Time",self.textfield4.text,@"didian",self.textfield5.text,@"Name",self.textfield6.text,@"aPhoneNumber",self.textfield7.text,@"QQ",self.textfield8.titleLabel.text,@"leixing",self.textfield9.text,@"gengduo",str,@"liaotian", nil];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:self.textfield1.text,@"Biaoti",self.textfield2.text,@"xiaoqu",self.textfield3.text,@"Time",self.textfield4.text,@"didian",self.textfield5.text,@"Name",self.textfield6.text,@"aPhoneNumber",self.textfield7.text,@"QQ",self.textfield8.titleLabel.text,@"leixing",self.textfield9.text,@"gengduo",str,@"liaotian",@"2",@"diu", nil];
     [self.dic addObject:dic];
     [text setObject:self.dic forKey:@"testArray"];
     [text saveInBackground];

@@ -30,8 +30,6 @@
 		92C630881CA543B00098046D /* registerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C630841CA543B00098046D /* registerViewController.xib */; };
 		92C6308D1CA544040098046D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6308A1CA544040098046D /* AppDelegate.m */; };
 		92C6308E1CA544040098046D /* CustomTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6308C1CA544040098046D /* CustomTabBarVC.m */; };
-		92C630921CA54C660098046D /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630901CA54C660098046D /* FirstTableViewCell.m */; };
-		92C630931CA54C660098046D /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C630911CA54C660098046D /* FirstTableViewCell.xib */; };
 		DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F2C1CA40AD400DC70C8 /* IssueViewController.m */; };
 		DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F2E1CA40AD400DC70C8 /* NumberOneViewController.m */; };
 		DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A8F301CA40AD400DC70C8 /* NumberTwoViewController.m */; };
@@ -42,6 +40,9 @@
 		DB4727D61CA4DA0300E5AA9E /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727D51CA4DA0300E5AA9E /* ChatListViewController.m */; };
 		DB4727D91CA4DAE900E5AA9E /* ChatROOMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */; };
 		DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */; };
+		DB7A18AA1CA661DA00FDBD3A /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A18A91CA661DA00FDBD3A /* FirstModel.m */; };
+		DB7A18AE1CA6685800FDBD3A /* SecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A18AC1CA6685800FDBD3A /* SecondTableViewCell.m */; };
+		DB7A18AF1CA6685800FDBD3A /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7A18AD1CA6685800FDBD3A /* SecondTableViewCell.xib */; };
 		DBC015441CA37AAC00961E84 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC015431CA37AAC00961E84 /* 1.jpg */; };
 		DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */; };
 		DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8D1C9F803900A0E6B3 /* SecondViewController.m */; };
@@ -99,9 +100,6 @@
 		92C6308A1CA544040098046D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MyWork/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		92C6308B1CA544040098046D /* CustomTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarVC.h; path = MyWork/CustomTabBarVC.h; sourceTree = SOURCE_ROOT; };
 		92C6308C1CA544040098046D /* CustomTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarVC.m; path = MyWork/CustomTabBarVC.m; sourceTree = SOURCE_ROOT; };
-		92C6308F1CA54C660098046D /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
-		92C630901CA54C660098046D /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
-		92C630911CA54C660098046D /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		A9E4A394CC499E369D6B3681 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6B205D859C8DC1A7CBC4913 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A8F2B1CA40AD400DC70C8 /* IssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueViewController.h; sourceTree = "<group>"; };
@@ -123,6 +121,11 @@
 		DB4727D81CA4DAE900E5AA9E /* ChatROOMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatROOMViewController.m; sourceTree = "<group>"; };
 		DB4727DA1CA4DB5900E5AA9E /* UserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFactory.h; sourceTree = "<group>"; };
 		DB4727DB1CA4DB5900E5AA9E /* UserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFactory.m; sourceTree = "<group>"; };
+		DB7A18A81CA661DA00FDBD3A /* FirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstModel.h; path = ../Select/FirstModel.h; sourceTree = "<group>"; };
+		DB7A18A91CA661DA00FDBD3A /* FirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstModel.m; path = ../Select/FirstModel.m; sourceTree = "<group>"; };
+		DB7A18AB1CA6685800FDBD3A /* SecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTableViewCell.h; sourceTree = "<group>"; };
+		DB7A18AC1CA6685800FDBD3A /* SecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewCell.m; sourceTree = "<group>"; };
+		DB7A18AD1CA6685800FDBD3A /* SecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
 		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		DBEF2C8A1C9F803900A0E6B3 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
@@ -262,12 +265,14 @@
 				92403BB51C97B1680063911A /* FriendList */,
 				92403BC01C97B21B0063911A /* FindTableViewController.h */,
 				92403BC11C97B21B0063911A /* FindTableViewController.m */,
+				DB7A18A81CA661DA00FDBD3A /* FirstModel.h */,
+				DB7A18A91CA661DA00FDBD3A /* FirstModel.m */,
 				DBEF2C981C9F82E900A0E6B3 /* DetailViewController.h */,
 				DBEF2C991C9F82E900A0E6B3 /* DetailViewController.m */,
 				DBEF2C9A1C9F82E900A0E6B3 /* DetailViewController.xib */,
-				92C6308F1CA54C660098046D /* FirstTableViewCell.h */,
-				92C630901CA54C660098046D /* FirstTableViewCell.m */,
-				92C630911CA54C660098046D /* FirstTableViewCell.xib */,
+				DB7A18AB1CA6685800FDBD3A /* SecondTableViewCell.h */,
+				DB7A18AC1CA6685800FDBD3A /* SecondTableViewCell.m */,
+				DB7A18AD1CA6685800FDBD3A /* SecondTableViewCell.xib */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -443,7 +448,6 @@
 				DBEF2CBD1C9F83FF00A0E6B3 /* LaunchImage-700-568h@2x.png in Resources */,
 				DBEF2CB61C9F83FF00A0E6B3 /* AppIcon57x57@2x.png in Resources */,
 				DB0A8F381CA40AD400DC70C8 /* SelectPickerNewView.xib in Resources */,
-				92C630931CA54C660098046D /* FirstTableViewCell.xib in Resources */,
 				92403AD41C96A8AE0063911A /* LaunchScreen.storyboard in Resources */,
 				DBC015441CA37AAC00961E84 /* 1.jpg in Resources */,
 				92403B9E1C97AC460063911A /* tabbar_background.png in Resources */,
@@ -462,6 +466,7 @@
 				DBEF2CBB1C9F83FF00A0E6B3 /* denglu06@2x.png in Resources */,
 				92403BA41C97AC460063911A /* tabbar_button_sessions_normal.png in Resources */,
 				DBEF2CC01C9F83FF00A0E6B3 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				DB7A18AF1CA6685800FDBD3A /* SecondTableViewCell.xib in Resources */,
 				92403BA51C97AC460063911A /* tabbar_button_sessions_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7A18AA1CA661DA00FDBD3A /* FirstModel.m in Sources */,
 				92C6308D1CA544040098046D /* AppDelegate.m in Sources */,
 				92C6308E1CA544040098046D /* CustomTabBarVC.m in Sources */,
 				DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */,
@@ -538,9 +544,9 @@
 				DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */,
 				DBEF2C951C9F803900A0E6B3 /* SelectPickerView.m in Sources */,
 				92403BB91C97B1840063911A /* MyViewController.m in Sources */,
-				92C630921CA54C660098046D /* FirstTableViewCell.m in Sources */,
 				DB0A8F3B1CA40BDF00DC70C8 /* NumberThreeViewController.m in Sources */,
 				DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */,
+				DB7A18AE1CA6685800FDBD3A /* SecondTableViewCell.m in Sources */,
 				DB4727D61CA4DA0300E5AA9E /* ChatListViewController.m in Sources */,
 				DBEF2CA01C9F82E900A0E6B3 /* DetailViewController.m in Sources */,
 				DB0A8F371CA40AD400DC70C8 /* SelectPickerNewView.m in Sources */,

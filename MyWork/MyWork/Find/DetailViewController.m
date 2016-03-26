@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-
+#import "FirstModel.h"
 @interface DetailViewController ()
 
 @end
@@ -18,7 +18,16 @@
     [super viewDidLoad];
     self.navigationController.title = @"详细信息";
     self.view = [[[NSBundle mainBundle]loadNibNamed:@"DetailViewController" owner:self options:nil]lastObject];
-    
+    self.navigationController.navigationBar.translucent = NO;
+    self.Biaoti.text = self.model.Biaoti;
+    self.xiaoqu.text = self.model.xiaoqu;
+    self.Time.text = self.model.Time;
+    self.didian.text = self.model.didian;
+    self.Naem.text = self.model.Name;
+    self.aPhoneNumber.text = self.model.aPhoneNumber;
+    self.QQ.text = self.model.QQ;
+    self.leixing.text = self.model.leixing;
+    self.genduo.text = self.model.gengduo;
 }
 
 - (void)didReceiveMemoryWarning {
