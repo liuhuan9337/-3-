@@ -51,17 +51,41 @@
 
 @property (nonatomic, strong) SelectPickerNewView *pickerView;
 @property (nonatomic, assign) NSInteger flag;
-
+@property(nonatomic,strong)NSMutableArray *dic;
+@property(nonatomic,strong)NSMutableDictionary *diction;
 
 
 
 @end
 
 @implementation NumberTwoViewController
+-(NSMutableDictionary *)diction
+{
+    if (!_diction) {
+        _diction = [NSMutableDictionary dictionary];
+    }
+    return _diction;
+}
+static NSInteger i = 0;
+-(void)root
+{
+    AVQuery *query = [AVQuery queryWithClassName:@"Boy"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count == 0) {
+            
+        }else{
+            self.diction = objects[0];
+        }
+    }];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self root];
     
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemAction:)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
     
     
@@ -314,6 +338,32 @@
     
     
 }
+/**
+ *  点击的方法
+ */
+-(void)rightItemAction:(UIBarButtonItem *)sender{
+    [self root];
+    AVQuery *query = [AVQuery queryWithClassName:@"Boy"];
+    [query deleteAllInBackgroundWithBlock:nil];
+    if (i == 0) {
+        self.dic = [NSMutableArray arrayWithArray:self.diction[@"testArray"]];
+        i++;
+    }
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user objectForKey:@"Nsstring"];
+    AVObject *text = [AVObject objectWithClassName:@"Boy"];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:self.textfield1.text,@"Biaoti",self.textfield2.text,@"xiaoqu",self.textfield3.text,@"Time",self.textfield4.text,@"didian",self.textfield5.text,@"Name",self.textfield6.text,@"aPhoneNumber",self.textfield7.text,@"QQ",self.textfield8.titleLabel.text,@"leixing",self.textfield9.text,@"gengduo",str,@"liaotian",@"2",@"diu", nil];
+    [self.dic addObject:dic];
+    [text setObject:self.dic forKey:@"testArray"];
+    [text saveInBackground];
+    NSLog(@"上");
+    
+    
+    
+    
+    
+}
+
 -(void)getString:(NSString *)selectString{
     if (_flag == 1) {
         
