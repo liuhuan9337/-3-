@@ -58,7 +58,7 @@
     [super viewDidLoad];
     self.title = @"搜索结果";
     [self root];
-    [self.tableView registerClass:[SecondTableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"SecondTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell_id"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,11 +80,15 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SecondTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        //创建 cell
-        cell = [[SecondTableViewCell alloc]initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
+    static NSString *cell_id = @"cell_id";
+    
+    SecondTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
+    
+    
+    //    if (!cell) {
+    //        cell = [[SecondTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_id];
+    //    }
+    //
     FirstModel *model = self.dic[indexPath.row];
     cell.first.text =  model.Time;
     cell.second.text = model.Biaoti;
@@ -92,7 +96,7 @@
     cell.four.text = model.xiaoqu;
     cell.fifth.text = model.didian;
     cell.Sixth.text = model.gengduo;
-  
+    
     
     return cell;
 }
