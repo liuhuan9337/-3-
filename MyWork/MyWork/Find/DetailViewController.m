@@ -8,6 +8,8 @@
 
 #import "DetailViewController.h"
 #import "FirstModel.h"
+#import <CDChatManager.h>
+#import "ChatROOMViewController.h"
 @interface DetailViewController ()
 
 @end
@@ -28,6 +30,20 @@
     self.QQ.text = self.model.QQ;
     self.leixing.text = self.model.leixing;
     self.genduo.text = self.model.gengduo;
+}
+/**
+ *  通话联系
+ *
+ */
+- (IBAction)callActioin:(id)sender {
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user objectForKey:@"Nsstring"];
+    [[CDChatManager manager] openWithClientId:str callback:^(BOOL succeeded, NSError *error) {
+        [[CDChatManager manager]fetchConversationWithOtherId:self.model.liaotian callback:^(AVIMConversation *conversation, NSError *error) {
+            ChatROOMViewController *chat = [[ChatROOMViewController alloc]initWithConversation:conversation];
+            [self.navigationController pushViewController:chat animated:YES];
+        }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

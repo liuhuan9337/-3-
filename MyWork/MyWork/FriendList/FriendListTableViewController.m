@@ -54,12 +54,12 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *str = [user objectForKey:@"Nsstring"];
-    [[CDChatManager manager]openWithClientId:str callback:^(BOOL succeeded, NSError *error) {
-        ChatListViewController *chat = [[ChatListViewController alloc]init];
-        [self.navigationController pushViewController:chat animated:YES];
-    } ];
+//    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+//    NSString *str = [user objectForKey:@"Nsstring"];
+//    [[CDChatManager manager]openWithClientId:str callback:^(BOOL succeeded, NSError *error) {
+//        ChatListViewController *chat = [[ChatListViewController alloc]init];
+//        [self.navigationController pushViewController:chat animated:YES];
+//    } ];
 }
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

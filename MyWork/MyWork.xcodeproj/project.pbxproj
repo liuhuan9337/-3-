@@ -22,7 +22,6 @@
 		92403BA61C97AC460063911A /* tabbar_button_updates_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9B1C97AC460063911A /* tabbar_button_updates_normal.png */; };
 		92403BA71C97AC460063911A /* tabbar_button_updates_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9C1C97AC460063911A /* tabbar_button_updates_selected.png */; };
 		92403BB91C97B1840063911A /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BB81C97B1840063911A /* MyViewController.m */; };
-		92403BBF1C97B2070063911A /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BBE1C97B2070063911A /* FriendListTableViewController.m */; };
 		92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BC11C97B21B0063911A /* FindTableViewController.m */; };
 		9268DFCF1CA68512002E5191 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */; };
 		92C630851CA543B00098046D /* enTerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630811CA543B00098046D /* enTerViewController.m */; };
@@ -45,6 +44,8 @@
 		DB7A18AE1CA6685800FDBD3A /* SecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7A18AC1CA6685800FDBD3A /* SecondTableViewCell.m */; };
 		DB7A18AF1CA6685800FDBD3A /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7A18AD1CA6685800FDBD3A /* SecondTableViewCell.xib */; };
 		DBC015441CA37AAC00961E84 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC015431CA37AAC00961E84 /* 1.jpg */; };
+		DBD64A541CA68723005A6A35 /* Datamodel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD64A511CA68723005A6A35 /* Datamodel+CoreDataProperties.m */; };
+		DBD64A551CA68723005A6A35 /* Datamodel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD64A531CA68723005A6A35 /* Datamodel.m */; };
 		DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */; };
 		DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8D1C9F803900A0E6B3 /* SecondViewController.m */; };
 		DBEF2C951C9F803900A0E6B3 /* SelectPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEF2C8F1C9F803900A0E6B3 /* SelectPickerView.m */; };
@@ -87,8 +88,6 @@
 		92403BAF1C97AE540063911A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		92403BB71C97B1840063911A /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		92403BB81C97B1840063911A /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		92403BBD1C97B2070063911A /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
-		92403BBE1C97B2070063911A /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
 		92403BC01C97B21B0063911A /* FindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewController.h; sourceTree = "<group>"; };
 		92403BC11C97B21B0063911A /* FindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewController.m; sourceTree = "<group>"; };
 		9268DFCE1CA68512002E5191 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -129,6 +128,10 @@
 		DB7A18AC1CA6685800FDBD3A /* SecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewCell.m; sourceTree = "<group>"; };
 		DB7A18AD1CA6685800FDBD3A /* SecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
 		DBC015431CA37AAC00961E84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
+		DBD64A501CA68723005A6A35 /* Datamodel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Datamodel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DBD64A511CA68723005A6A35 /* Datamodel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Datamodel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DBD64A521CA68723005A6A35 /* Datamodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datamodel.h; sourceTree = "<group>"; };
+		DBD64A531CA68723005A6A35 /* Datamodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datamodel.m; sourceTree = "<group>"; };
 		DBEF2C8A1C9F803900A0E6B3 /* FirstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewController.h; sourceTree = "<group>"; };
 		DBEF2C8B1C9F803900A0E6B3 /* FirstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewController.m; sourceTree = "<group>"; };
 		DBEF2C8C1C9F803900A0E6B3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -212,8 +215,12 @@
 			isa = PBXGroup;
 			children = (
 				92403AC51C96A8AE0063911A /* main.m */,
-				92403BAF1C97AE540063911A /* PrefixHeader.pch */,
 				9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */,
+				DBD64A501CA68723005A6A35 /* Datamodel+CoreDataProperties.h */,
+				DBD64A511CA68723005A6A35 /* Datamodel+CoreDataProperties.m */,
+				DBD64A521CA68723005A6A35 /* Datamodel.h */,
+				DBD64A531CA68723005A6A35 /* Datamodel.m */,
+				92403BAF1C97AE540063911A /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,8 +256,6 @@
 		92403BB51C97B1680063911A /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
-				92403BBD1C97B2070063911A /* FriendListTableViewController.h */,
-				92403BBE1C97B2070063911A /* FriendListTableViewController.m */,
 				DB4727D41CA4DA0300E5AA9E /* ChatListViewController.h */,
 				DB4727D51CA4DA0300E5AA9E /* ChatListViewController.m */,
 				DB4727DA1CA4DB5900E5AA9E /* UserFactory.h */,
@@ -532,6 +537,7 @@
 				9268DFCF1CA68512002E5191 /* dataModel.xcdatamodeld in Sources */,
 				DB7A18AA1CA661DA00FDBD3A /* FirstModel.m in Sources */,
 				92C6308D1CA544040098046D /* AppDelegate.m in Sources */,
+				DBD64A541CA68723005A6A35 /* Datamodel+CoreDataProperties.m in Sources */,
 				92C6308E1CA544040098046D /* CustomTabBarVC.m in Sources */,
 				DB0A8F361CA40AD400DC70C8 /* NumberTwoViewController.m in Sources */,
 				92403AC61C96A8AE0063911A /* main.m in Sources */,
@@ -539,7 +545,6 @@
 				DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */,
 				DB0A8F401CA4100700DC70C8 /* Rootview.m in Sources */,
 				DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */,
-				92403BBF1C97B2070063911A /* FriendListTableViewController.m in Sources */,
 				92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */,
 				DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */,
 				92C630871CA543B00098046D /* registerViewController.m in Sources */,
@@ -553,6 +558,7 @@
 				DB7A18AE1CA6685800FDBD3A /* SecondTableViewCell.m in Sources */,
 				DB4727D61CA4DA0300E5AA9E /* ChatListViewController.m in Sources */,
 				DBEF2CA01C9F82E900A0E6B3 /* DetailViewController.m in Sources */,
+				DBD64A551CA68723005A6A35 /* Datamodel.m in Sources */,
 				DB0A8F371CA40AD400DC70C8 /* SelectPickerNewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

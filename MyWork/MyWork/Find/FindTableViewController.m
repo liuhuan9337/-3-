@@ -13,6 +13,7 @@
 @interface FindTableViewController ()
 @property(nonatomic,strong)NSMutableArray *dic;
 @property(nonatomic,strong)NSMutableDictionary *diction;
+@property(nonatomic,strong)AppDelegate *appDelegate;
 @end
 
 @implementation FindTableViewController
@@ -43,10 +44,28 @@
                 FirstModel *model = [[FirstModel alloc]init];
                 [model setValuesForKeysWithDictionary:dic];
                 [self.dic addObject:model];
+                /**
+                 *  数据库
+                 */
+                NSEntityDescription *entity = [NSEntityDescription entityForName:@"Datamodel" inManagedObjectContext:self.appDelegate.managedObjectContext];
+                Datamodel *data = [[Datamodel alloc]initWithEntity:entity insertIntoManagedObjectContext:self.appDelegate.managedObjectContext];
+                data.biaoti = model.Biaoti;
+                data.name = model.Name;
+                data.xiaoqu = model.xiaoqu;
+                data.time = model.Time;
+                data.didian = model.didian;
+                data.aphoneNumber = model.aPhoneNumber;
+                data.qq = model.QQ;
+                data.leixing = model.leixing;
+                data.gengduo = model.gengduo;
+                data.diu = model.diu;
+                [self.appDelegate saveContext];
+                
+                }
             }
             [self.tableView reloadData];
         }
-    }];
+    ];
     
 }
 
@@ -56,7 +75,11 @@
      *  数据的处理
      */
     [self root];
-    
+    /**
+     *  数据库的处理
+     *1.初始化AppDatagate
+     */
+    self.appDelegate = [UIApplication sharedApplication].delegate;
     
     
     

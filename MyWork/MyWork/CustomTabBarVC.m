@@ -15,6 +15,8 @@
 
 @interface CustomTabBarVC ()<UINavigationControllerDelegate>
 
+@property (nonatomic, strong)ChatListViewController * friendVC;
+
 @end
 
 @implementation CustomTabBarVC
@@ -41,10 +43,13 @@
     UINavigationController * issueNC = [[UINavigationController alloc]initWithRootViewController:issueVC];
     
     //好友列表
-    FriendListTableViewController * friendVC = [[FriendListTableViewController alloc]init];
-    friendVC.navigationItem.title = @"会话列表";
-    friendVC.view.backgroundColor = [UIColor purpleColor];
-    UINavigationController * friendNC = [[UINavigationController alloc]initWithRootViewController:friendVC];
+//    FriendListTableViewController * friendVC = [[FriendListTableViewController alloc]init];
+    
+     self.friendVC = [[ChatListViewController alloc]init];
+    
+    self.friendVC.navigationItem.title = @"会话列表";
+//    self.friendVC.view.backgroundColor = [UIColor purpleColor];
+    UINavigationController * friendNC = [[UINavigationController alloc] initWithRootViewController:self.friendVC];
     
     //发现列表
     FindTableViewController * findVC = [[FindTableViewController alloc]init];
@@ -148,7 +153,18 @@
 
 - (void)twoBtnAction:(UIButton *)sender
 {
+    
     self.selectedIndex = sender.tag - 1;
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user objectForKey:@"Nsstring"];
+    [[CDChatManager manager]openWithClientId:str callback:^(BOOL succeeded, NSError *error) {
+//        ChatListViewController *chat = [[ChatListViewController alloc]init];
+        [self.navigationController pushViewController:self.friendVC animated:YES];
+    } ];
+
+    
+    
 }
 
 - (void)threeBtnAction:(UIButton *)sender

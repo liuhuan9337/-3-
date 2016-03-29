@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstTableViewController : UITableViewController
-
+@property(nonatomic,strong)NSString *leixing;
+@property(nonatomic,strong)NSString *leixingFirst;
 @end

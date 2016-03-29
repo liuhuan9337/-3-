@@ -8,18 +8,57 @@
 
 #import "FirstTableViewController.h"
 #import "SecondViewController.h"
-
+#import "FirstModel.h"
+#import "SecondTableViewCell.h"
+#import "DetailViewController.h"
 @interface FirstTableViewController ()
-
+@property(nonatomic,strong)NSMutableDictionary *diction;
+@property(nonatomic,strong)NSMutableArray *dic;
 @end
 
 @implementation FirstTableViewController
+-(NSMutableArray *)dic
+{
+    if (!_dic) {
+        _dic = [NSMutableArray array];
+    }
+    return _dic;
+}
+-(NSMutableDictionary *)diction
+{
+    if (!_diction) {
+        _diction = [NSMutableDictionary dictionary];
+    }
+    return _diction;
+}
+-(void)root
+{
+    AVQuery *query = [AVQuery queryWithClassName:@"Boy"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count == 0) {
+            
+        }else{
+            self.diction = objects[0];
+            NSArray *arr = self.diction[@"testArray"];
+            for (NSDictionary *dic in arr) {
+                FirstModel *model = [[FirstModel alloc]init];
+                [model setValuesForKeysWithDictionary:dic];
+                if ([model.diu isEqualToString:self.leixing]&& [model.leixing isEqualToString:self.leixingFirst]) {
+                    [self.dic addObject:model];
+                }
+            }
+            [self.tableView reloadData];
 
+        }
+        
+    }];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"搜索结果";
-    
-
+    [self root];
+    [self.tableView registerClass:[SecondTableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,22 +70,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 4;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 1;
+    return self.dic.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    SecondTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         //创建 cell
-        cell = [[UITableViewCell alloc]initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[SecondTableViewCell alloc]initWithStyle: UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    
+    FirstModel *model = self.dic[indexPath.row];
+    cell.first.text =  model.Time;
+    cell.second.text = model.Biaoti;
+    cell.thild.text = model.leixing;
+    cell.four.text = model.xiaoqu;
+    cell.fifth.text = model.didian;
+    cell.Sixth.text = model.gengduo;
   
     
     return cell;
@@ -56,8 +101,13 @@
     return 170;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SecondViewController *inforVC = [[SecondViewController alloc]init];
-    [self.navigationController pushViewController:inforVC animated:YES];
+//    SecondViewController *inforVC = [[SecondViewController alloc]init];
+//    
+//    [self.navigationController pushViewController:inforVC animated:YES];
+    DetailViewController *det = [[DetailViewController alloc] init];
+    
+    det.model = self.dic[indexPath.row];
+    [self.navigationController pushViewController:det animated:YES];
     
 }
 

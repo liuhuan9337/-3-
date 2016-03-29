@@ -28,8 +28,6 @@
 @property (nonatomic, assign) NSInteger flag;
 
 
-
-
 @end
 
 @implementation SelectViewController
@@ -110,9 +108,10 @@ self.fieldOne.borderStyle = UITextBorderStyleBezel;
 -(void)getString:(NSString *)selectString{
     if (_flag == 0) {
         [self.ZhaoLing setTitle:selectString forState:UIControlStateNormal];
+        
     }else{
         [self.School setTitle:selectString forState:UIControlStateNormal];
- 
+        
     }
 }
 //
@@ -130,6 +129,8 @@ self.fieldOne.borderStyle = UITextBorderStyleBezel;
 -(void)ButtonTwoAction:(UIButton *)sender{
 
     FirstTableViewController *firstVC = [[FirstTableViewController alloc]init];
+    firstVC.leixing = self.ZhaoLing.titleLabel.text;
+    firstVC.leixingFirst = self.School.titleLabel.text;
     [self.navigationController pushViewController:firstVC animated:YES];
 
 

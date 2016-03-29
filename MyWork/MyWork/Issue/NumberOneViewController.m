@@ -54,8 +54,10 @@
 @property(nonatomic,strong)UIDatePicker *datePicker;
 @property(nonatomic,strong)NSMutableArray *dic;
 @property(nonatomic,strong)NSMutableDictionary *diction;
-
-
+/**
+ *  数据库
+ */
+@property(nonatomic,strong)AppDelegate *appDelegate;
 @end
 
 @implementation NumberOneViewController
@@ -87,8 +89,10 @@ static NSInteger i = 0;
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(rightItemAction:)];
     self.navigationItem.rightBarButtonItem = rightItem;
-    
-    
+    /**
+     *  AppDelegate的初始化
+     */
+    self.appDelegate = [UIApplication sharedApplication].delegate;
     
     
     
@@ -310,11 +314,26 @@ static NSInteger i = 0;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *str = [user objectForKey:@"Nsstring"];
     AVObject *text = [AVObject objectWithClassName:@"Boy"];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:self.textfield1.text,@"Biaoti",self.textfield2.text,@"xiaoqu",self.textfield3.text,@"Time",self.textfield4.text,@"didian",self.textfield5.text,@"Name",self.textfield6.text,@"aPhoneNumber",self.textfield7.text,@"QQ",self.textfield8.titleLabel.text,@"leixing",self.textfield9.text,@"gengduo",str,@"liaotian",@"2",@"diu", nil];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:self.textfield1.text,@"Biaoti",self.textfield2.text,@"xiaoqu",self.textfield3.text,@"Time",self.textfield4.text,@"didian",self.textfield5.text,@"Name",self.textfield6.text,@"aPhoneNumber",self.textfield7.text,@"QQ",self.textfield8.titleLabel.text,@"leixing",self.textfield9.text,@"gengduo",str,@"liaotian",@"寻物启事",@"diu", nil];
     [self.dic addObject:dic];
     [text setObject:self.dic forKey:@"testArray"];
     [text saveInBackground];
-    NSLog(@"上");
+    /**
+     *  数据库
+     */
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Datamodel" inManagedObjectContext:self.appDelegate.managedObjectContext];
+    Datamodel *data = [[Datamodel alloc]initWithEntity:entity insertIntoManagedObjectContext:self.appDelegate.managedObjectContext];
+    data.biaoti = self.textfield1.text;
+    data.name = self.textfield5.text;
+    data.xiaoqu = self.textfield2.text;
+    data.time = self.textfield3.text;
+    data.didian = self.textfield4.text;
+    data.aphoneNumber = self.textfield6.text;
+    data.qq = self.textfield7.text;
+    data.leixing = self.textfield8.titleLabel.text;
+    data.gengduo = self.textfield9.text;
+    data.diu = @"寻物启事";
+    [self.appDelegate saveContext];
 
     
 

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.button setTitle:@"失物招领" forState:UIControlStateNormal];
+    [self.button setTitle:@"寻物招领" forState:UIControlStateNormal];
     self.button.frame = CGRectMake(100, 100, 200, 30);
     self.button.backgroundColor = [UIColor redColor];
     [self.button addTarget:self action:@selector(ButtonActon:) forControlEvents:UIControlEventTouchUpInside];

@@ -9,8 +9,9 @@
 #import "ChatListViewController.h"
 #import "ChatROOMViewController.h"
 #import <CDChatManager.h>
-@interface ChatListViewController ()<CDChatListVCDelegate>
+@interface ChatListViewController ()<CDChatListVCDelegate,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITextField *textField;
+@property(nonatomic,strong)UIView *headerView;
 @end
 
 @implementation ChatListViewController
@@ -22,21 +23,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = 0;
+
     self.chatListDelegate = self;
-    UIView * headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 60)];
-    self.tableView.tableHeaderView = headerView;
+    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 30, 260)];
+    self.headerView.backgroundColor = [UIColor greenColor];
+    self.tableView.tableHeaderView = self.headerView;
     
-    _textField = [[UITextField alloc]initWithFrame:CGRectMake(15, 5, self.view.bounds.size.width - 30, 25)];
+    _textField = [[UITextField alloc]initWithFrame:CGRectMake(15, 5, self.view.bounds.size.width - 30, 125)];
     _textField.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _textField.layer.borderWidth = 1;
-    [headerView addSubview:_textField];
+    [self.headerView addSubview:_textField];
     
     UIButton * startChat = [UIButton buttonWithType:UIButtonTypeSystem];
     startChat.frame = CGRectMake(60, 35, self.view.bounds.size.width - 120, 20);
     [startChat setTitle:@"开始聊天" forState:UIControlStateNormal];
-    [headerView addSubview:startChat];
+    [self.headerView addSubview:startChat];
     [startChat addTarget:self action:@selector(startChatClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
+
 - (void)startChatClicked:(UIButton *)btn
 {
     if(_textField.text.length > 0)
@@ -52,11 +61,30 @@
     }
     
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return 10;
+//}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 50;
+//}
+//
+//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+//    return cell;
+//}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.tabBarController.tabBar.hidden = NO;
+    self.navigationController.tabBarController.tabBar.hidden = YES;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
