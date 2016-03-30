@@ -8,9 +8,12 @@
 
 #import "MyViewController.h"
 #import "HeaderView.h"
+#import "ShowDetailTableViewController.h"
 @interface MyViewController ()
 
 @property (nonatomic, strong)NSArray * array;
+
+@property (nonatomic, strong)ShowDetailTableViewController * findAndLoseWithThing;
 
 @end
 
@@ -20,23 +23,23 @@
     [super viewDidLoad];
     
     self.array = @[@"我的招领启事",@"我的寻物启事",@"清除缓存"];
-    
+    self.findAndLoseWithThing = [[ShowDetailTableViewController alloc]init];
     UIBarButtonItem * cancel = [[UIBarButtonItem alloc]initWithTitle:@"退出登录" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction:)];
     
     self.navigationItem.rightBarButtonItem = cancel;
     
     
-}
-
-- (void)cancelAction:(UIBarButtonItem *)sender
-{
+    
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+//退出登录方法登录方法
+- (void)cancelAction:(UIBarButtonItem *)sender
+{
+#pragma mark  没写
 }
+
 
 #pragma mark - Table view data source
 
@@ -67,16 +70,57 @@
     return 200;
 }
 
+//分区Header高度
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     HeaderView * headerView = [[HeaderView alloc]init];
-    
+    //替换视图
     return headerView;
     
 }
 
+//选中cell执行方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSLog(@"%ld",indexPath.row);
+    switch (indexPath.row) {
+        case 0:
+            //招领启事
+            [self cellWithOne:indexPath.row];
+            break;
+        case 1:
+            //寻物启事
+            [self cellWithTwo:indexPath.row];
+            break;
+        default:
+            //清除缓存
+            [self cellWithThree:indexPath.row];
+            break;
+    }
+    
+}
 
+//招领启事方法
+- (void)cellWithOne:(NSInteger)indexRow
+{
+    NSLog(@"招领");
+    [self.navigationController pushViewController:self.findAndLoseWithThing animated:YES];
+}
+//寻物启事方法
+- (void)cellWithTwo:(NSInteger)indexRow
+{
+    NSLog(@"寻物");
+    [self.navigationController pushViewController:self.findAndLoseWithThing animated:YES];
 
+}
+
+//清除缓存
+- (void)cellWithThree:(NSInteger)indexRow
+{
+    NSLog(@"清除缓存");
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

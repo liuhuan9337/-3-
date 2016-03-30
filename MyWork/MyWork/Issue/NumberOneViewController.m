@@ -83,7 +83,7 @@ static NSInteger i = 0;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    self.view.backgroundColor = [UIColor whiteColor];
     [self root];
  
     

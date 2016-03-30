@@ -25,6 +25,7 @@
 		92403BA71C97AC460063911A /* tabbar_button_updates_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9C1C97AC460063911A /* tabbar_button_updates_selected.png */; };
 		92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BC11C97B21B0063911A /* FindTableViewController.m */; };
 		9268DFCF1CA68512002E5191 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */; };
+		92AF61541CABD7AA00D01B16 /* ShowDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AF61531CABD7AA00D01B16 /* ShowDetailTableViewController.m */; };
 		92C630851CA543B00098046D /* enTerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630811CA543B00098046D /* enTerViewController.m */; };
 		92C630861CA543B00098046D /* enTerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92C630821CA543B00098046D /* enTerViewController.xib */; };
 		92C630871CA543B00098046D /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630831CA543B00098046D /* registerViewController.m */; };
@@ -94,6 +95,8 @@
 		92403BC01C97B21B0063911A /* FindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewController.h; sourceTree = "<group>"; };
 		92403BC11C97B21B0063911A /* FindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewController.m; sourceTree = "<group>"; };
 		9268DFCE1CA68512002E5191 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
+		92AF61521CABD7AA00D01B16 /* ShowDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailTableViewController.h; sourceTree = "<group>"; };
+		92AF61531CABD7AA00D01B16 /* ShowDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailTableViewController.m; sourceTree = "<group>"; };
 		92C6307F1CA543850098046D /* registerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = registerViewController.h; path = MyWork/registerViewController.h; sourceTree = SOURCE_ROOT; };
 		92C630801CA543B00098046D /* enTerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enTerViewController.h; path = MyWork/enTerViewController.h; sourceTree = SOURCE_ROOT; };
 		92C630811CA543B00098046D /* enTerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = enTerViewController.m; path = MyWork/enTerViewController.m; sourceTree = SOURCE_ROOT; };
@@ -252,6 +255,8 @@
 			children = (
 				921E4A151CAB784700499B6C /* MyViewController.h */,
 				921E4A161CAB784700499B6C /* MyViewController.m */,
+				92AF61521CABD7AA00D01B16 /* ShowDetailTableViewController.h */,
+				92AF61531CABD7AA00D01B16 /* ShowDetailTableViewController.m */,
 				921E4A181CAB7BF700499B6C /* HeaderView.h */,
 				921E4A191CAB7BF700499B6C /* HeaderView.m */,
 			);
@@ -556,6 +561,7 @@
 				DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */,
 				92C630871CA543B00098046D /* registerViewController.m in Sources */,
 				92C630851CA543B00098046D /* enTerViewController.m in Sources */,
+				92AF61541CABD7AA00D01B16 /* ShowDetailTableViewController.m in Sources */,
 				DBEF2C971C9F803900A0E6B3 /* SelectViewController.m in Sources */,
 				DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */,
 				DBEF2C951C9F803900A0E6B3 /* SelectPickerView.m in Sources */,
