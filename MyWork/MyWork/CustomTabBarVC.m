@@ -26,20 +26,20 @@
     //我的界面
     MyViewController * myTV = [[MyViewController alloc]init];
     myTV.navigationItem.title = @"我的";
-    myTV.view.backgroundColor = [UIColor redColor];
+    myTV.view.backgroundColor = [UIColor whiteColor];
     UINavigationController * myNC = [[UINavigationController alloc]initWithRootViewController:myTV];
     
     
     //搜索界面
     SelectViewController * selectVC = [[SelectViewController alloc]init];
     selectVC.navigationItem.title = @"搜索";
-    selectVC.view.backgroundColor = [UIColor brownColor];
+    selectVC.view.backgroundColor = [UIColor whiteColor];
     UINavigationController * selectNC = [[UINavigationController alloc]initWithRootViewController:selectVC];
     
     //发布界面
     IssueViewController * issueVC = [[IssueViewController alloc]init];
     issueVC.navigationItem.title = @"发布消息";
-    issueVC.view.backgroundColor = [UIColor blueColor];
+    issueVC.view.backgroundColor = [UIColor whiteColor];
     UINavigationController * issueNC = [[UINavigationController alloc]initWithRootViewController:issueVC];
     
     //好友列表
@@ -54,7 +54,7 @@
     //发现列表
     FindTableViewController * findVC = [[FindTableViewController alloc]init];
     findVC.navigationItem.title = @"发现";
-    findVC.view.backgroundColor = [UIColor grayColor];
+    findVC.view.backgroundColor = [UIColor whiteColor];
     UINavigationController * findNC = [[UINavigationController alloc]initWithRootViewController:findVC];
     self.viewControllers = [NSArray arrayWithObjects:findNC,friendNC,issueNC,selectNC,myNC, nil];
 }

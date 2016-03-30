@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B608C2E099F9ED2D93647F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B205D859C8DC1A7CBC4913 /* libPods.a */; };
+		921E4A171CAB784700499B6C /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921E4A161CAB784700499B6C /* MyViewController.m */; };
+		921E4A1A1CAB7BF700499B6C /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 921E4A191CAB7BF700499B6C /* HeaderView.m */; };
 		92403AC61C96A8AE0063911A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403AC51C96A8AE0063911A /* main.m */; };
 		92403AD11C96A8AE0063911A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92403AD01C96A8AE0063911A /* Assets.xcassets */; };
 		92403AD41C96A8AE0063911A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92403AD21C96A8AE0063911A /* LaunchScreen.storyboard */; };
@@ -21,7 +23,6 @@
 		92403BA51C97AC460063911A /* tabbar_button_sessions_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9A1C97AC460063911A /* tabbar_button_sessions_selected.png */; };
 		92403BA61C97AC460063911A /* tabbar_button_updates_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9B1C97AC460063911A /* tabbar_button_updates_normal.png */; };
 		92403BA71C97AC460063911A /* tabbar_button_updates_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92403B9C1C97AC460063911A /* tabbar_button_updates_selected.png */; };
-		92403BB91C97B1840063911A /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BB81C97B1840063911A /* MyViewController.m */; };
 		92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92403BC11C97B21B0063911A /* FindTableViewController.m */; };
 		9268DFCF1CA68512002E5191 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9268DFCD1CA68512002E5191 /* dataModel.xcdatamodeld */; };
 		92C630851CA543B00098046D /* enTerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C630811CA543B00098046D /* enTerViewController.m */; };
@@ -70,6 +71,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921E4A151CAB784700499B6C /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		921E4A161CAB784700499B6C /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		921E4A181CAB7BF700499B6C /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		921E4A191CAB7BF700499B6C /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		92403AC11C96A8AE0063911A /* MyWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92403AC51C96A8AE0063911A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92403AD01C96A8AE0063911A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,8 +91,6 @@
 		92403B9B1C97AC460063911A /* tabbar_button_updates_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_button_updates_normal.png; sourceTree = "<group>"; };
 		92403B9C1C97AC460063911A /* tabbar_button_updates_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_button_updates_selected.png; sourceTree = "<group>"; };
 		92403BAF1C97AE540063911A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		92403BB71C97B1840063911A /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		92403BB81C97B1840063911A /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		92403BC01C97B21B0063911A /* FindTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewController.h; sourceTree = "<group>"; };
 		92403BC11C97B21B0063911A /* FindTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewController.m; sourceTree = "<group>"; };
 		9268DFCE1CA68512002E5191 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -247,8 +250,10 @@
 		92403BA81C97AD990063911A /* My */ = {
 			isa = PBXGroup;
 			children = (
-				92403BB71C97B1840063911A /* MyViewController.h */,
-				92403BB81C97B1840063911A /* MyViewController.m */,
+				921E4A151CAB784700499B6C /* MyViewController.h */,
+				921E4A161CAB784700499B6C /* MyViewController.m */,
+				921E4A181CAB7BF700499B6C /* HeaderView.h */,
+				921E4A191CAB7BF700499B6C /* HeaderView.m */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -544,15 +549,16 @@
 				DB4727D91CA4DAE900E5AA9E /* ChatROOMViewController.m in Sources */,
 				DB0A8F341CA40AD400DC70C8 /* IssueViewController.m in Sources */,
 				DB0A8F401CA4100700DC70C8 /* Rootview.m in Sources */,
+				921E4A1A1CAB7BF700499B6C /* HeaderView.m in Sources */,
 				DBEF2C931C9F803900A0E6B3 /* FirstTableViewController.m in Sources */,
 				92403BC21C97B21B0063911A /* FindTableViewController.m in Sources */,
+				921E4A171CAB784700499B6C /* MyViewController.m in Sources */,
 				DBEF2C941C9F803900A0E6B3 /* SecondViewController.m in Sources */,
 				92C630871CA543B00098046D /* registerViewController.m in Sources */,
 				92C630851CA543B00098046D /* enTerViewController.m in Sources */,
 				DBEF2C971C9F803900A0E6B3 /* SelectViewController.m in Sources */,
 				DB4727DC1CA4DB5900E5AA9E /* UserFactory.m in Sources */,
 				DBEF2C951C9F803900A0E6B3 /* SelectPickerView.m in Sources */,
-				92403BB91C97B1840063911A /* MyViewController.m in Sources */,
 				DB0A8F3B1CA40BDF00DC70C8 /* NumberThreeViewController.m in Sources */,
 				DB0A8F351CA40AD400DC70C8 /* NumberOneViewController.m in Sources */,
 				DB7A18AE1CA6685800FDBD3A /* SecondTableViewCell.m in Sources */,
