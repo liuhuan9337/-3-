@@ -65,12 +65,12 @@
     return cell;
 }
 
+//分区Header高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 200;
 }
 
-//分区Header高度
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     HeaderView * headerView = [[HeaderView alloc]init];
