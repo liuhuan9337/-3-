@@ -334,7 +334,7 @@ static NSInteger i = 0;
     data.gengduo = self.textfield9.text;
     data.diu = @"寻物启事";
     [self.appDelegate saveContext];
-
+    [self.navigationController popViewControllerAnimated:YES];
     
 
 

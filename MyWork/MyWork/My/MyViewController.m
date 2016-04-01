@@ -9,11 +9,16 @@
 #import "MyViewController.h"
 #import "HeaderView.h"
 #import "ShowDetailTableViewController.h"
-@interface MyViewController ()
+#import "LendCloudModel.h"
+#import "FirstModel.h"
+#import "SecondTableViewController.h"
+#import "enTerViewController.h"
+@interface MyViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong)NSArray * array;
 
 @property (nonatomic, strong)ShowDetailTableViewController * findAndLoseWithThing;
+@property(nonatomic,strong)HeaderView *headerView;
 
 @end
 
@@ -38,6 +43,8 @@
 - (void)cancelAction:(UIBarButtonItem *)sender
 {
 #pragma mark  没写
+    
+    [self presentViewController:[enTerViewController new] animated:YES completion:nil];
 }
 
 
@@ -73,10 +80,33 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    HeaderView * headerView = [[HeaderView alloc]init];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *str = [user objectForKey:@"sstring"];
+    self.headerView = [[HeaderView alloc]init];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
+    [self.headerView.imageView addGestureRecognizer:tap];
+    self.headerView.imageView.userInteractionEnabled = YES;
+    self.headerView.nameID.text = str;
     //替换视图
-    return headerView;
+    return self.headerView;
     
+}
+- (void)tapAction
+{
+    NSLog(@"ajkflas");
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
+    pickerController.allowsEditing = YES;
+    pickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    pickerController.delegate = self;
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    
+   self.headerView.imageView.image = info[UIImagePickerControllerEditedImage];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 //选中cell执行方法
@@ -105,13 +135,45 @@
 - (void)cellWithOne:(NSInteger)indexRow
 {
     NSLog(@"招领");
-    [self.navigationController pushViewController:self.findAndLoseWithThing animated:YES];
+    [LendCloudModel dataWithLendCloudOnblack:^(id object) {
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        NSString *str = [user objectForKey:@"Nsstring"];
+        NSString * strFirst = @"招领启事";
+        NSMutableArray *arraySecond =[NSMutableArray array];
+     for (FirstModel *first in object) {
+         
+        if ([first.diu isEqualToString:strFirst]&& [first.liaotian isEqualToString:str]) {
+                [arraySecond addObject:first];
+            }
+        }
+        
+        self.findAndLoseWithThing.array = nil;
+        self.findAndLoseWithThing.array = arraySecond;
+          [self.navigationController pushViewController:self.findAndLoseWithThing animated:YES];
+    }];
+  
 }
 //寻物启事方法
 - (void)cellWithTwo:(NSInteger)indexRow
 {
     NSLog(@"寻物");
-    [self.navigationController pushViewController:self.findAndLoseWithThing animated:YES];
+    [LendCloudModel dataWithLendCloudOnblack:^(id object) {
+        SecondTableViewController *second = [[SecondTableViewController alloc]init];
+        NSArray *one = object;
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        NSString *str = [user objectForKey:@"Nsstring"];
+        NSString * strFirst = @"寻物启事";
+        NSMutableArray *arrayFirst =[NSMutableArray array];
+        for (FirstModel *first in one) {
+            if ([first.diu isEqual: strFirst] && [first.liaotian isEqual: str]) {
+                [arrayFirst addObject:first];
+            }
+        }
+        second.array = nil;
+        second.array = arrayFirst;
+        
+        [self.navigationController pushViewController:second animated:YES];
+    }];
 
 }
 

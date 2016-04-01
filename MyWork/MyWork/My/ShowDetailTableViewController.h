@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ShowDetailTableViewController : UITableViewController
-
+@property(nonatomic,strong)NSArray *array;
+@property(nonatomic,strong)NSString *string;
 @end

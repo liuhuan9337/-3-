@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "FirstModel.h"
 #import "SecondTableViewCell.h"
+#import "LORefresh.h"
 @interface FindTableViewController ()
 @property(nonatomic,strong)NSMutableArray *dic;
 @property(nonatomic,strong)NSMutableDictionary *diction;
@@ -68,6 +69,42 @@
     ];
     
 }
+- (void)headRefresh
+{
+    __block FindTableViewController *weakSelf = self;
+    [self.tableView addRefreshWithRefreshViewType:LORefreshViewTypeHeaderDefault refreshingBlock:^{
+        
+        NSLog(@"下拉刷新喽");
+        [weakSelf root];
+        
+        [weakSelf.tableView reloadData];
+        //        a
+        NSLog(@"%@",weakSelf.tableView.defaultFooter);
+        
+        //结束刷新
+        [weakSelf.tableView.defaultHeader endRefreshing];
+        
+    }];
+}
+- (void)footRefresh
+{
+    NSLog(@"上拉加载喽");
+    //1
+    __block FindTableViewController *weakSelf = self;
+    
+    //2
+    [self.tableView addRefreshWithRefreshViewType:LORefreshViewTypeFooterDefault refreshingBlock:^{
+        [weakSelf root];
+        
+        [weakSelf.tableView reloadData];
+        
+        //3
+        //结束刷新
+        [weakSelf.tableView.defaultFooter endRefreshing];
+        
+    }];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -91,7 +128,15 @@
     self.tableView.rowHeight = 200;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"SecondTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell_id"];
+    [self footRefresh];
+    [self headRefresh];
     
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+
 }
 - (void)leftBarButton
 {

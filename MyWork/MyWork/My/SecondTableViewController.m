@@ -1,34 +1,33 @@
 //
-//  ShowDetailTableViewController.m
+//  SecondTableViewController.m
 //  MyWork
 //
-//  Created by Sea on 16/3/30.
+//  Created by 刘欢 on 16/4/1.
 //  Copyright © 2016年 Sea. All rights reserved.
 //
 
-#import "ShowDetailTableViewController.h"
+#import "SecondTableViewController.h"
 #import "FirstModel.h"
 #import "SecondTableViewCell.h"
 #import "DetailViewController.h"
-@interface ShowDetailTableViewController ()
+@interface SecondTableViewController ()
 @property(nonatomic,strong)NSMutableArray *arr;
+
 @end
 
-@implementation ShowDetailTableViewController
-//-(NSMutableArray *)arr
-//{
-//    if (!_arr) {
-//        _arr = [NSMutableArray array];
-//    }
-//    return _arr;
-//}
+@implementation SecondTableViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.arr = [NSMutableArray arrayWithArray:self.array];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"SecondTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell_id"];
     self.tableView.rowHeight = 170;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +68,17 @@
     det.model = self.arr[indexPath.row];
     [self.navigationController pushViewController:det animated:YES];
 }
+
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.
